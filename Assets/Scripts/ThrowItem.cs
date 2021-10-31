@@ -1,15 +1,22 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 // [RequireComponent(typeof(Rigidbody))]
 public class ThrowItem : MonoBehaviour
 {
-    [SerializeField] private bool _isRotate;
+    [FormerlySerializedAs("_isRotate")] [SerializeField] private bool _isVerticalRotate;
+    [SerializeField] private bool _isGorizontalRotate;
     [SerializeField] private float _passOffsetY;
-    [SerializeField] private float _failOffsetY;
+    [FormerlySerializedAs("_failOffsetY")] [SerializeField] private float _failOffset;
     [SerializeField] private bool _isGorizontalMoving;
+    [SerializeField] private float _heightThrownIfVertical = 100;
+    [SerializeField] private bool _isNeedRotateToPass = false;
 
     public float PassOffsetY => _passOffsetY;
-    public float FailOffsetY => _failOffsetY;
+    public float FailOffset => _failOffset;
     public bool IsGorizontalMoving => _isGorizontalMoving;
-    public bool IsRotate => _isRotate;
+    public bool IsVerticalRotate => _isVerticalRotate;
+    public bool IsGorizontalRotate => _isGorizontalRotate;
+    public bool IsNeedRotateToPass => _isNeedRotateToPass;
+    public float HeightThrownIfVertical => _heightThrownIfVertical;
 }

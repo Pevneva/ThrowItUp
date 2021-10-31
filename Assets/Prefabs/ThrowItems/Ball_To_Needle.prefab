@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 4238339918519686534}
   - component: {fileID: 6923764688979377480}
   m_Layer: 0
-  m_Name: Ball
+  m_Name: Ball_To_Needle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -129,10 +129,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b679643f275235b498760ab71cbf7bb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isRotate: 0
-  _passOffsetY: 45.2
-  _failOffsetY: 5
+  _isVerticalRotate: 0
+  _isGorizontalRotate: 0
+  _passOffsetY: 27.3
+  _failOffset: 5
   _isGorizontalMoving: 0
+  _heightThrownIfVertical: 80
+  _isNeedRotateToPass: 0
 --- !u!114 &3396732414482731957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,6 +148,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd0b4e7fdbf413f43b8497fa8a166bf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _speedHorizontalRotation: 20
+  _speedVerticalRotation: 7
+  _speedMoving: 200
 --- !u!114 &4238339918519686534
 MonoBehaviour:
   m_ObjectHideFlags: 0

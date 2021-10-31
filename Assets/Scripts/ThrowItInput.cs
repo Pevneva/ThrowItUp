@@ -17,6 +17,7 @@ public class ThrowItInput : MonoBehaviour
     
     private void Update()
     {
+// #if UNITY_ANDROID
         // Track a single touch as a direction control.
         if (Input.touchCount > 0)
         {
@@ -40,8 +41,18 @@ public class ThrowItInput : MonoBehaviour
 
                 // Report that a direction has been chosen when the finger is lifted.
                 case TouchPhase.Ended:
-                    Debug.Log("INPUT Ended : ");
                     _isDirectionChosen = true;
+                    
+                    Vector2 mousePoint = Input.mousePosition;
+                    _direction = mousePoint - _startPos;
+                    
+                    Debug.Log("INPUT Ended : ");
+                    Debug.Log("INPUT Ended _startPos : " + _startPos);
+                    Debug.Log("INPUT Ended : mousePoint : " + mousePoint);
+                    Debug.Log("INPUT Ended : distance : " + Vector2.Distance(_startPos, mousePoint));
+
+                    if (Vector2.Distance(_startPos, mousePoint)>0.01f)
+                        SwipeDone?.Invoke(_direction.normalized * 10);
                     break;
             }
         }
@@ -50,13 +61,12 @@ public class ThrowItInput : MonoBehaviour
             // Something that uses the chosen direction...
             
         }
-
+// #elif UNITY_EDITOR
         if (Input.GetMouseButtonDown(0))
         {
             Vector2 mousePoint = Input.mousePosition;
 
             _startPos = mousePoint;
-            // SwipeStartPoint = mousePoint;
 
         }
 
@@ -67,5 +77,6 @@ public class ThrowItInput : MonoBehaviour
             
             SwipeDone?.Invoke(_direction.normalized * 10);
         }
+// #endif
     }
 }

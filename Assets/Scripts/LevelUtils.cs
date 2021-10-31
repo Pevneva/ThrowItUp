@@ -24,8 +24,14 @@ public class LevelUtils : MonoBehaviour
     
     private void Start()
     {
-        Level = 1;
-        LevelChanged?.Invoke(Level);
+        if (Level == 0)
+        {
+            LevelChanged?.Invoke(1);
+            Level = 1;          
+        }
+
+        Debug.Log("Level : " + Level);
+        
         _dialogsContainer = FindObjectOfType<DialogsContainer>();
         _failThrownItems = new List<GameObject>();
         InitLevelItems();

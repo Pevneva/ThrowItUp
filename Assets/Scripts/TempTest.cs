@@ -15,6 +15,9 @@ public class TempTest : MonoBehaviour
     private Vector3 _eulerAngleVelocity;
     private Vector3 _angleVector;
     private bool _isStoppingRotate;
+    public Quaternion _startQuaternion;
+    public Quaternion _quaternion1;
+    public Quaternion _quaternion2;
     
     // Start is called before the first frame update
     void Start()
@@ -26,6 +29,12 @@ public class TempTest : MonoBehaviour
         var vector = new Vector3(0, 0, 1);
         
         Debug.Log(" VECTOR : " + GetPointOnVectorByDistance(start, vector, distance));
+        
+        // transform.rotation = _quaternion;
+        _startQuaternion = transform.rotation;
+        _quaternion1 = Quaternion.Euler(0, -180, 0);
+        _quaternion2 = Quaternion.Euler(0, 0, 90);
+        transform.DOLocalRotateQuaternion(_startQuaternion * _quaternion2 * _quaternion1, 2);
 
 
         //Set the angular velocity of the Rigidbody (rotating around the Y axis, 100 deg/sec)
@@ -51,6 +60,15 @@ public class TempTest : MonoBehaviour
     
     //Physics.gravity = new Vector3(0, 9.81F, 0);
     
+    
+    private void FixedUpdate()
+    {
+
+        transform.rotation = _startQuaternion * _quaternion1 * _quaternion2;
+
+
+    }
+    
     private Vector3 GetPointOnVectorByDistance(Vector3 startPoint, Vector3 vector, float distance)
     {
         var x = distance * vector.x / vector.magnitude + startPoint.x;
@@ -64,7 +82,7 @@ public class TempTest : MonoBehaviour
         throw new NotImplementedException();
     }
 
-    private void FixedUpdate()
+    private void FixedUpdate2()
     {
         // _rigidbody.AddRelativeTorque( _angleVector * Time.fixedDeltaTime, ForceMode.Impulse);
         // if (_isStoppingRotate)

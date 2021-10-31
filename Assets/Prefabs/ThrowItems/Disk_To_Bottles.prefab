@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 2416902998537386439}
   - component: {fileID: 4258826035886967259}
   m_Layer: 0
-  m_Name: Disk
+  m_Name: Disk_To_Bottles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -129,10 +129,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b679643f275235b498760ab71cbf7bb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isRotate: 0
+  _isVerticalRotate: 0
+  _isGorizontalRotate: 1
   _passOffsetY: 40
-  _failOffsetY: 0.3
+  _failOffset: 0.3
   _isGorizontalMoving: 1
+  _heightThrownIfVertical: 100
+  _isNeedRotateToPass: 0
 --- !u!114 &186726467488364735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,6 +148,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd0b4e7fdbf413f43b8497fa8a166bf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _speedHorizontalRotation: 20
+  _speedVerticalRotation: 7
+  _speedMoving: 200
 --- !u!114 &2416902998537386439
 MonoBehaviour:
   m_ObjectHideFlags: 0

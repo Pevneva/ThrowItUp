@@ -16,19 +16,16 @@ public class MenuPanel : MonoBehaviour
     
     private void OnEnable()
     {
+        Debug.Log("ON ENABLE MenuPanel");
         _settingsButtton.onClick.AddListener(OnClickSettingsButton);
         _restartButtton.onClick.AddListener(OnClickRestartButton);
         _vibrationPhoneButtton.onClick.AddListener(OnClickVibrationButton);
         _phoneButtton.onClick.AddListener(OnClickPhoneButton);
 
         _levelUtils = FindObjectOfType<LevelUtils>();
-        _levelUtils.LevelChanged += SetLevelNumber;
-        _isVibrationPhoneShowing = true;
-    }
+        SetLevelNumber(_levelUtils.Level);
 
-    private void OnDisable()
-    {
-        _levelUtils.LevelChanged -= SetLevelNumber;
+        _isVibrationPhoneShowing = true;
     }
 
     private void OnClickSettingsButton()
@@ -57,8 +54,11 @@ public class MenuPanel : MonoBehaviour
         _isVibrationPhoneShowing = true;
     }
 
-    private void SetLevelNumber(int levelNumber)
+    private void SetLevelNumber(int level)
     {
-        _levelNumbertext.text = "Level " + levelNumber;
+        if (level != 0)
+            _levelNumbertext.text = "LEVEL " + level;
+        else
+            _levelNumbertext.text = "LEVEL " + 1;
     }
 }

@@ -59,7 +59,7 @@ public class ThrowChecker : MonoBehaviour
         _angleDeviation = Vector2.Angle(_targetScreenDirection, swipeDirection);
         _angleDeviation = swipeDirection.y >= 0  ? _angleDeviation : 180 -_angleDeviation;
         
-        var middleY = _throwItem.IsGorizontalMoving ? _targetPoint.y + _throwItem.PassOffsetY / 2 : _targetPoint.y + 100;
+        var middleY = _throwItem.IsGorizontalMoving ? _targetPoint.y + _throwItem.PassOffsetY / 2 : _targetPoint.y + _throwItem.HeightThrownIfVertical;
         var middleOfTargetVector = VectorUtils.GetRotatedVector(new Vector2(_startPoint.x, _startPoint.z), _middleVectorPoint, _angleDeviation, _isClockWiseSwiping);
         var middlePoint = new Vector3(middleOfTargetVector.x, middleY, middleOfTargetVector.y);
         
