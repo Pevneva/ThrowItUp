@@ -4,60 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf6fe296-36a0-40c2-8387-724cef7eeb69" name="Default Changelist" comment="">
+    <list default="true" id="bf6fe296-36a0-40c2-8387-724cef7eeb69" name="Default Changelist" comment="Added new items.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ThrowItUp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ThrowItUp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Materials.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/Materials.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Models/20242_Clothespin_spring_type_V_1.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Models/20242_Clothespin_spring_type_V_1.obj.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Ball.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Ball.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Ball.physicMaterial" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Ball.physicMaterial.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Bottle.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Bottle.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Bottle.physicMaterial" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Bottle.physicMaterial.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Disk 1.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Disk 1.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Disk.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Disk.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Ground.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Ground.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Sofa.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Sofa.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Table.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Table.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Table.physicMaterial" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Table.physicMaterial.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/sky.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/sky.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItems/BottleBall.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItems/BottleBall.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItems/BottleBottle.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItems/BottleBottle.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItems/DoubleBattles.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItems/DoubleBattles.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Ball.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Ball.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/BottleParent.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/BottleParent.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/BottleParent_temp.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/BottleParent_temp.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Disk.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Disk.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/wine bottle 1.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/wine bottle 1.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameNew.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameNew.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelUtils.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuPanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TempTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TempTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ThrowChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ThrowChecker.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ThrowItInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ThrowItInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ThrowItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ThrowItem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ThrownItemMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ThrownItemMover.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,15 +27,18 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LogPrint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE1F8EF4-975B-4EAC-BEB0-ACCC1B22C9B0/08/b2385e14/ShortcutExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE1F8EF4-975B-4EAC-BEB0-ACCC1B22C9B0/ff/6ca5bd13/TweenerCore`3.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelUtils.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ThrowChecker.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MenuPanel.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ThrowItem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/TempTest.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LogPrint.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ThrowChecker.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ThrownItemMover.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ThrowItInput.cs" />
     </changedPaths>
@@ -133,7 +87,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1635360990104</updated>
-      <workItem from="1635360995718" duration="39647000" />
+      <workItem from="1635360995718" duration="71284000" />
     </task>
     <task id="LOCAL-00001" summary="Init project">
       <created>1635361486939</created>
@@ -149,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635361604990</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added new items.">
+      <created>1635673195023</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1635673195023</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,6 +133,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Init project" />
     <MESSAGE value="Init project 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init project 2" />
+    <MESSAGE value="Added new items." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new items." />
   </component>
 </project>

@@ -36,7 +36,7 @@ public class ThrowItInput : MonoBehaviour
                 // Determine direction by comparing the current touch position with the initial one.
                 case TouchPhase.Moved:
                     // _direction = touch.position - _startPos;
-                    Debug.Log("INPUT _direction : " + _direction);
+                    // Debug.Log("INPUT _direction : " + _direction);
                     break;
 
                 // Report that a direction has been chosen when the finger is lifted.
@@ -51,7 +51,7 @@ public class ThrowItInput : MonoBehaviour
                     Debug.Log("INPUT Ended : mousePoint : " + mousePoint);
                     Debug.Log("INPUT Ended : distance : " + Vector2.Distance(_startPos, mousePoint));
 
-                    if (Vector2.Distance(_startPos, mousePoint)>0.01f)
+                    if (Vector2.Distance(_startPos, mousePoint)>5f)
                         SwipeDone?.Invoke(_direction.normalized * 10);
                     break;
             }

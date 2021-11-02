@@ -19,8 +19,19 @@ public class ThrownItemMover : MonoBehaviour
     private Ray _ray;
     private Vector3 _failTargetVector;
     private float _duration;
+    private float _duration2;
     private bool _isFailRotation;
     private Vector3 _startPoint;
+    private Quaternion _startQuaternion;
+    private bool _isDoubleRotations;
+    private float  _angle1;
+    private float _angle2;
+    private int _countHorizontalRotationsInt;
+    private float _countHorizontalRotationsFloat;
+    private float _speedHorizontalRotation2;
+
+    private int counter;
+    private int _durationInFrames;
 
     public event UnityAction LevelPassed; 
     public event UnityAction LevelFailed;
@@ -30,25 +41,30 @@ public class ThrownItemMover : MonoBehaviour
         _throwItem = GetComponent<ThrowItem>();
         _rigidbody = GetComponent<Rigidbody>();
         _rigidbody.isKinematic = true;
-        _duration = 0.5f;
+        // _duration = 0.5f;
         _rigidbody.mass = 5;
-        _speedMoving = 200;
+        _speedMoving = 250;
+        _speedHorizontalRotation = 0.03f;
     }
 
     public void MovePass(Vector3 middlePoint, Vector3 targetPoint, float angle)
     {
         Sequence seq = DOTween.Sequence();
-        var duration = Vector3.Distance(transform.position, middlePoint) / _speedMoving;
-        var startQuaternion = transform.rotation;
-        seq.Append(transform.DOMove(middlePoint, duration).SetEase(Ease.Linear));
-        seq.Append(transform.DOMove(new Vector3(targetPoint.x, targetPoint.y + _throwItem.PassOffsetY, targetPoint.z), duration)
+        _duration = Vector3.Distance(transform.position, middlePoint) / _speedMoving;
+        _startQuaternion = transform.rotation;
+
+        var durationInFrames = _duration * 2 / Time.fixedDeltaTime;
+        _durationInFrames = Mathf.FloorToInt(durationInFrames);
+        
+        seq.Append(transform.DOMove(middlePoint, _duration).SetEase(Ease.Linear));
+        seq.Append(transform.DOMove(new Vector3(targetPoint.x, targetPoint.y + _throwItem.PassOffsetY, targetPoint.z), _duration)
             .SetEase(Ease.Linear)
             .OnComplete(() => DoWin())); 
         
         if (_throwItem.IsVerticalRotate)
         {
-            var countRotations = Mathf.FloorToInt(duration * _speedVerticalRotation);
-            var tempDuration = 2 * duration / (countRotations * 2 + 1);
+            var countRotations = Mathf.FloorToInt(_duration * _speedVerticalRotation);
+            var tempDuration = 2 * _duration / (countRotations * 2 + 1);
             Debug.Log(" Loops: " + countRotations);
             
             transform.localRotation = Quaternion.Euler(transform.localRotation.eulerAngles.x,angle, transform.localRotation.eulerAngles.z); 
@@ -59,39 +75,43 @@ public class ThrownItemMover : MonoBehaviour
                 .SetEase(Ease.Linear)); 
         }
 
-        if (_throwItem.IsGorizontalRotate)// && _throwItem.IsNeedRotateToPass == false)
+        if (_throwItem.IsGorizontalRotate && _throwItem.IsNeedRotateToPass == false)
         {
-            var countRotations = Mathf.FloorToInt(duration * _speedHorizontalRotation);
-            Debug.Log(" Loops: " + countRotations);
+            _countHorizontalRotationsInt = Mathf.FloorToInt(_duration / _speedHorizontalRotation);
+           
+            Debug.Log(" Loops: " + _countHorizontalRotationsInt);
             
             seq.Insert(0, transform
-                .DOLocalRotate(new Vector3(0, -180, 0), 1/_speedHorizontalRotation)
-                .SetLoops(countRotations * 2 - 1, LoopType.Incremental)
+                .DOLocalRotate(new Vector3(0, -180, 0), _speedHorizontalRotation)
+                .SetLoops(_countHorizontalRotationsInt * 2 - 1, LoopType.Incremental)
                 .SetEase(Ease.Linear));
         }
 
-        if (_throwItem.IsNeedRotateToPass)
+        if (_throwItem.IsGorizontalRotate && _throwItem.IsNeedRotateToPass)
         {
-            Debug.Log("AAA BBB CCC");
-            var q1 = Quaternion.Euler(0, 0, -90);
-            var q2 = Quaternion.Euler(0, -180, 0);
-            transform.DOLocalRotateQuaternion(startQuaternion * q1 * q2, duration * 2);
+            _countHorizontalRotationsInt = Mathf.FloorToInt(_duration * 2 / _speedHorizontalRotation);
             
-            // seq.Insert(0, transform
-            //     .DOLocalRotateQuaternion(startQuaternion * q1 * q2, duration * 2)
-            //     .SetEase(Ease.Linear));     
-            
-            
-            // seq.Insert(0, transform
-            //     .DOLocalRotate(new Vector3(0, 0, -90), duration * 2)
-            //     .SetEase(Ease.Linear));            
+            Debug.Log("AAA BBB CCC duration : " + (_duration * 2));
+            Debug.Log("AAA BBB CCC durationInFrames FLOAT: " + durationInFrames);
+            Debug.Log("AAA BBB CCC _durationInFrames INT : " + _durationInFrames);
+            Debug.Log("AAA BBB CCC  _countHorizontalRotationsInt : " +  _countHorizontalRotationsInt);
+            Debug.Log("AAA BBB CCC  180 * _countHorizontalRotationsInt : " +  (180 * _countHorizontalRotationsInt));
+            Debug.Log("AAA BBB CCC  RESULT : " +  ( 180 * _countHorizontalRotationsInt)/_durationInFrames);
+           _isDoubleRotations = true;
         }
     }
 
     private void FixedUpdate()
     {
-        // var q1 = Quaternion.Euler(0, 0, -90);
-        // var q2 = Quaternion.Euler(0, -180, 0);
+        if (_isDoubleRotations && _angle1 < 180 * _countHorizontalRotationsInt)
+        {
+            counter++;
+            _angle1 +=  (float)(180 * _countHorizontalRotationsInt)/(_durationInFrames);
+            _angle2 += Time.fixedDeltaTime * 90 / (_duration * 2);
+            Quaternion q1 = Quaternion.AngleAxis(_angle1, Vector3.up);
+            Quaternion q2 = Quaternion.AngleAxis(_angle2, Vector3.forward);
+            transform.rotation = _startQuaternion * q2 * q1;
+        }
     }
 
     private Vector3 GetFirstColliderPoint(Vector3 startRay, Vector3 endRay, float offset)
@@ -134,19 +154,22 @@ public class ThrownItemMover : MonoBehaviour
             resultPoint = targetPoint;  
         
         else if (resultPoint == Vector3.zero && _throwItem.IsGorizontalMoving)
-            resultPoint = VectorUtils.GetPointOnVectorByDistance(middlePoint, new Vector3(_failTargetVector.x, 0f, _failTargetVector.z), 1000);    
+            resultPoint = VectorUtils.GetPointOnVectorByDistance(middlePoint, new Vector3(_failTargetVector.x, 0f, _failTargetVector.z), 1000);
         
-        Invoke(nameof(DoFail), _duration * 2 + 0.1f);
-        
-        Sequence seq = DOTween.Sequence();
         var duration_1 = Vector3.Distance(transform.position, middlePoint) / _speedMoving;
         var duration_2 = Vector3.Distance(resultPoint, middlePoint) / _speedMoving;
+        _duration = duration_1 + duration_2;
+        
+        Invoke(nameof(DoFail), duration_1 * 2 + 0.1f);
+        
+        Sequence seq = DOTween.Sequence();
+
         seq.Append(transform.DOMove(middlePoint, duration_1).SetEase(Ease.Linear));
         seq.Append(transform.DOMove(resultPoint, duration_2).SetEase(Ease.Linear));
 
         if (_throwItem.IsVerticalRotate)
         {
-            var countRotations = Mathf.FloorToInt((duration_1 + duration_2) * _speedVerticalRotation);
+            var countRotations = Mathf.FloorToInt(_duration * _speedVerticalRotation);
             Debug.Log(" Loops: " + countRotations);
             
             transform.localRotation = Quaternion.Euler(transform.localRotation.eulerAngles.x,angle, transform.localRotation.eulerAngles.z); //to do angle
@@ -154,23 +177,18 @@ public class ThrownItemMover : MonoBehaviour
                 .DOLocalRotate(new Vector3(-180, angle, 0), (float) 1 / countRotations) //to do
                 .SetLoops(countRotations, LoopType.Incremental)// to do
                 .SetEase(Ease.Linear));
-            // seq.Insert(0, transform
-            //     .DOLocalRotate(new Vector3(-180, angle, 0), _duration/5) //to do
-            //     .SetLoops(9, LoopType.Incremental)// to do
-            //     .SetEase(Ease.Linear));
         }
 
         if (_throwItem.IsGorizontalRotate)
         {
-            var countRotations = Mathf.FloorToInt((duration_1 + duration_2) * _speedHorizontalRotation);
+            var countRotations = Mathf.FloorToInt(_duration / _speedHorizontalRotation);
             Debug.Log(" Loops: " + countRotations);
             
             seq.Insert(0, transform
-                .DOLocalRotate(new Vector3(0, -180, 0), 1/_speedHorizontalRotation)
+                .DOLocalRotate(new Vector3(0, -180, 0), _speedHorizontalRotation)
                 .SetLoops(countRotations + 1, LoopType.Incremental)
                 .SetEase(Ease.Linear));
         }
-        
         
         seq.OnComplete(() =>
         {
@@ -195,7 +213,10 @@ public class ThrownItemMover : MonoBehaviour
 
     private void DoWin()
     {
-        Debug.Log("WIN");
+        Debug.Log("WIN _angle1 : " + _angle1);
+        Debug.Log("WIN counter : " + counter);
+        _isDoubleRotations = false;
+        _angle1 = 0;
         LevelPassed?.Invoke();
     }    
     
