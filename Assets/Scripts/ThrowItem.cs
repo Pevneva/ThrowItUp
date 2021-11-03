@@ -4,10 +4,10 @@ using UnityEngine.Serialization;
 // [RequireComponent(typeof(Rigidbody))]
 public class ThrowItem : MonoBehaviour
 {
-    [FormerlySerializedAs("_isRotate")] [SerializeField] private bool _isVerticalRotate;
+    [SerializeField] private bool _isVerticalRotate;
     [SerializeField] private bool _isGorizontalRotate;
     [SerializeField] private float _passOffsetY;
-    [FormerlySerializedAs("_failOffsetY")] [SerializeField] private float _failOffset;
+    [SerializeField] private float _failOffset;
     [SerializeField] private bool _isGorizontalMoving;
     [SerializeField] private float _heightThrownIfVertical = 100;
     [SerializeField] private bool _isNeedRotateToPass = false;

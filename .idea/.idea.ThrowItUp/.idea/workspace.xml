@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf6fe296-36a0-40c2-8387-724cef7eeb69" name="Default Changelist" comment="Added new items.">
+    <list default="true" id="bf6fe296-36a0-40c2-8387-724cef7eeb69" name="Default Changelist" comment="Added  disk model.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ThrowItUp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ThrowItUp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameNew.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameNew.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ThrowItInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ThrowItInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ThrowItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ThrowItem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ThrownItemMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ThrownItemMover.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WinPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WinPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,19 +31,25 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LogPrint.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE1F8EF4-975B-4EAC-BEB0-ACCC1B22C9B0/08/b2385e14/ShortcutExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/ThrowItInput.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scenes/GameNew.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE1F8EF4-975B-4EAC-BEB0-ACCC1B22C9B0/ff/6ca5bd13/TweenerCore`3.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraMove.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/ThrownItemMover.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE1F8EF4-975B-4EAC-BEB0-ACCC1B22C9B0/08/b2385e14/ShortcutExtensions.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelUtils.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MenuPanel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ThrowItem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/TempTest.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LogPrint.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ThrowChecker.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ThrownItemMover.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ThrowItInput.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ThrowItem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/WinPanel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ThrownItemMover.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CameraMove.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="206NHDhW8oWBI7ysd8LRQCNPe9H" />
@@ -88,6 +97,7 @@
       <option name="presentableId" value="Default" />
       <updated>1635360990104</updated>
       <workItem from="1635360995718" duration="71284000" />
+      <workItem from="1635845921129" duration="16476000" />
     </task>
     <task id="LOCAL-00001" summary="Init project">
       <created>1635361486939</created>
@@ -110,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635673195023</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added  disk model.">
+      <created>1635846145167</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1635846145167</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,12 +145,14 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Init project" />
     <MESSAGE value="Init project 2" />
     <MESSAGE value="Added new items." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new items." />
+    <MESSAGE value="Added  disk model." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added  disk model." />
   </component>
 </project>

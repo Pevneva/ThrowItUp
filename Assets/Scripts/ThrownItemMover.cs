@@ -16,6 +16,7 @@ public class ThrownItemMover : MonoBehaviour
     
     private ThrowItem _throwItem;
     private Rigidbody _rigidbody;
+    private CameraMove _cameraMove;
     private Ray _ray;
     private Vector3 _failTargetVector;
     private float _duration;
@@ -40,6 +41,7 @@ public class ThrownItemMover : MonoBehaviour
     {
         _throwItem = GetComponent<ThrowItem>();
         _rigidbody = GetComponent<Rigidbody>();
+        _cameraMove = FindObjectOfType<CameraMove>();
         _rigidbody.isKinematic = true;
         // _duration = 0.5f;
         _rigidbody.mass = 5;
@@ -52,7 +54,8 @@ public class ThrownItemMover : MonoBehaviour
         Sequence seq = DOTween.Sequence();
         _duration = Vector3.Distance(transform.position, middlePoint) / _speedMoving;
         _startQuaternion = transform.rotation;
-
+        _cameraMove.MoveIfWin(_duration);
+        
         var durationInFrames = _duration * 2 / Time.fixedDeltaTime;
         _durationInFrames = Mathf.FloorToInt(durationInFrames);
         

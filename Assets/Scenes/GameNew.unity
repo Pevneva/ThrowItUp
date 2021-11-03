@@ -160,15 +160,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4ba60950edd7c0147a108648a92113cd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4ba60950edd7c0147a108648a92113cd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 96.9
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4ba60950edd7c0147a108648a92113cd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 167
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4ba60950edd7c0147a108648a92113cd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1230,10 +1230,11 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1295,13 +1296,34 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.043717775, y: 0.23249269, z: -0.007915845, w: 0.97158295}
-  m_LocalPosition: {x: -204, y: 124.2, z: -120.3}
+  m_LocalRotation: {x: 0.044297323, y: 0.3304217, z: -0.0034134567, w: 0.9427872}
+  m_LocalPosition: {x: -212, y: 128, z: -130}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 5.085, y: 26.927, z: 0.285}
+  m_LocalEulerAnglesHint: {x: 4.921, y: 38.685, z: 1.313}
+--- !u!114 &963194230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 252087b167a9f694387eed1486aac210, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startPosition: {x: -204, y: 128, z: -120.3}
+  _endPosition: {x: -161.3, y: 128, z: -38.4}
+  _startRotation: {x: 5.0848913, y: 26.927448, z: 0.28452453}
+  _endRotation: {x: 5.190527, y: 32.692856, z: 0.6339227}
+  _wayPoints:
+  - {x: -204, y: 128, z: -120.3}
+  - {x: -204, y: 128, z: -135}
+  - {x: -145, y: 128, z: 15}
+  _targetPosition: {fileID: 0}
 --- !u!54 &975689713
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -12,12 +12,14 @@ public class WinPanel : MonoBehaviour
     [SerializeField] private TMP_Text _level;
 
     private LevelUtils _levelUtils;
+    private CameraMove _cameraMove;
 
     public event UnityAction NextLevelOpened; 
 
     private void Start()
     {
         _levelUtils = FindObjectOfType<LevelUtils>();
+        _cameraMove = FindObjectOfType<CameraMove>();
         _level.text = "LEVEL " + _levelUtils.Level;
         _next.onClick.AddListener(OnNextButton);
     }
@@ -27,6 +29,7 @@ public class WinPanel : MonoBehaviour
         _levelUtils.RemoveOldThrowItems();
         _levelUtils.IncreaseLevel();
         _levelUtils.InitLevelItems();
+        _cameraMove.InitCamera();
         NextLevelOpened?.Invoke();
         Destroy(gameObject);
     }
