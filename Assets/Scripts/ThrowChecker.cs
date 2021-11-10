@@ -82,6 +82,6 @@ public class ThrowChecker : MonoBehaviour
 
     private bool IsPassed(float angleDeviation)
     {
-        return angleDeviation <= 5;
+        return angleDeviation <= 3;
     }
 }

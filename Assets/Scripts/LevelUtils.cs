@@ -20,6 +20,7 @@ public class LevelUtils : MonoBehaviour
     private ThrowItem _throwItem;
     private GameObject _targetItem;
     private DialogsContainer _dialogsContainer;
+    private FXUtils _fxUtils;
     private List<GameObject> _failThrownItems;
     
     private void Start()
@@ -30,11 +31,11 @@ public class LevelUtils : MonoBehaviour
             Level = 1;          
         }
 
-        Debug.Log("Level : " + Level);
-        
         _dialogsContainer = FindObjectOfType<DialogsContainer>();
+        _fxUtils = FindObjectOfType<FXUtils>();
         _failThrownItems = new List<GameObject>();
         InitLevelItems();
+        _fxUtils.HideWinFxImmediately();
     }
 
     private void OnDisable()
@@ -61,6 +62,7 @@ public class LevelUtils : MonoBehaviour
         DestroyAllFailThrownItems();
         _dialogsContainer.ShowWinPanelDialog();
         _menuPanel.SetActive(false);
+        _fxUtils.ShowWinFx();
     }
 
     private void OnLevelFailed()

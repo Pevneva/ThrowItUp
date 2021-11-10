@@ -13,6 +13,7 @@ public class WinPanel : MonoBehaviour
 
     private LevelUtils _levelUtils;
     private CameraMove _cameraMove;
+    private FXUtils _fxUtils;
 
     public event UnityAction NextLevelOpened; 
 
@@ -20,6 +21,7 @@ public class WinPanel : MonoBehaviour
     {
         _levelUtils = FindObjectOfType<LevelUtils>();
         _cameraMove = FindObjectOfType<CameraMove>();
+        _fxUtils = FindObjectOfType<FXUtils>();
         _level.text = "LEVEL " + _levelUtils.Level;
         _next.onClick.AddListener(OnNextButton);
     }
@@ -30,6 +32,7 @@ public class WinPanel : MonoBehaviour
         _levelUtils.IncreaseLevel();
         _levelUtils.InitLevelItems();
         _cameraMove.InitCamera();
+        _fxUtils.HideWinFxImmediately();
         NextLevelOpened?.Invoke();
         Destroy(gameObject);
     }

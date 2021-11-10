@@ -45,8 +45,8 @@ public class ThrownItemMover : MonoBehaviour
         _rigidbody.isKinematic = true;
         // _duration = 0.5f;
         _rigidbody.mass = 5;
-        _speedMoving = 250;
-        _speedHorizontalRotation = 0.03f;
+        _speedMoving = 15;
+        // _speedHorizontalRotation = 0.03f;
     }
 
     public void MovePass(Vector3 middlePoint, Vector3 targetPoint, float angle)
@@ -58,6 +58,10 @@ public class ThrownItemMover : MonoBehaviour
         
         var durationInFrames = _duration * 2 / Time.fixedDeltaTime;
         _durationInFrames = Mathf.FloorToInt(durationInFrames);
+        
+        Debug.Log("QQQ : " + new Vector3(targetPoint.x, targetPoint.y + _throwItem.PassOffsetY, targetPoint.z));
+        Debug.Log("targetPoint.y : " + targetPoint.y);
+        Debug.Log("_throwItem.PassOffsetY : " + _throwItem.PassOffsetY);
         
         seq.Append(transform.DOMove(middlePoint, _duration).SetEase(Ease.Linear));
         seq.Append(transform.DOMove(new Vector3(targetPoint.x, targetPoint.y + _throwItem.PassOffsetY, targetPoint.z), _duration)
@@ -86,7 +90,7 @@ public class ThrownItemMover : MonoBehaviour
             
             seq.Insert(0, transform
                 .DOLocalRotate(new Vector3(0, -180, 0), _speedHorizontalRotation)
-                .SetLoops(_countHorizontalRotationsInt * 2 - 1, LoopType.Incremental)
+                .SetLoops(_countHorizontalRotationsInt * 2, LoopType.Incremental)
                 .SetEase(Ease.Linear));
         }
 
@@ -108,6 +112,7 @@ public class ThrownItemMover : MonoBehaviour
     {
         if (_isDoubleRotations && _angle1 < 180 * _countHorizontalRotationsInt)
         {
+            Debug.Log("_angle1 : " + _angle1);
             counter++;
             _angle1 +=  (float)(180 * _countHorizontalRotationsInt)/(_durationInFrames);
             _angle2 += Time.fixedDeltaTime * 90 / (_duration * 2);
@@ -122,8 +127,16 @@ public class ThrownItemMover : MonoBehaviour
         var resultPoint = Vector3.zero;
         
         _ray = new Ray(startRay, endRay);
+        // var rayLeft = new Ray(startRay - new Vector3(_throwItem.FailOffset * 2,0,0), endRay);
+        // var rayRight = new Ray(startRay + new Vector3(_throwItem.FailOffset * 2,0,0), endRay);
         Physics.Raycast(_ray, out RaycastHit hit);
+        // Physics.Raycast(rayLeft, out RaycastHit hitLeft);
+        // Physics.Raycast(rayRight, out RaycastHit hitRight);
         
+        Debug.Log("_ray: " + _ray);
+        // Debug.Log("rayLeft: " + (startRay - new Vector3(_throwItem.FailOffset,0,0)));
+        // Debug.Log("rayRight: " + (startRay + new Vector3(_throwItem.FailOffset,0,0)));
+
         if (hit.collider != null)
         {
             resultPoint = VectorUtils.GetPointOnVectorByDistance(startRay, endRay, hit.distance - offset);
@@ -134,9 +147,25 @@ public class ThrownItemMover : MonoBehaviour
             
             _ray = new Ray(startRay, endVector);
             Physics.Raycast(_ray, out RaycastHit hit2);
-            
+
             if (hit2.collider != null)
+            {
                 resultPoint = VectorUtils.GetPointOnVectorByDistance(startRay, endVector, hit2.distance - offset);
+                Debug.Log("RRR resultPoint : " + resultPoint);
+                Debug.Log("RRR hit2.distance : " + hit2.distance);
+                Debug.Log("RRR offset : " + offset);
+                Debug.Log("RRR size : " + _throwItem.GetComponentInChildren<Collider>().bounds.size);
+            }
+                
+            // else if (_throwItem.GetComponent<BoxCollider>() != null)
+            // {
+            //     var collider = GetComponent<BoxCollider>();
+            //     RaycastHit hitBoxcast = new RaycastHit();
+            //     Physics.BoxCast(collider.bounds.center, transform.localScale, transform.forward, out hitBoxcast, transform.rotation, 100);
+            //     
+            //     if (hitBoxcast.collider != null)
+            //         resultPoint = VectorUtils.GetPointOnVectorByDistance(startRay, endVector, hit2.distance - offset);
+            // }
         }
         return resultPoint;
     }
@@ -149,6 +178,7 @@ public class ThrownItemMover : MonoBehaviour
         var resultPoint = GetFirstColliderPoint(middlePoint, _failTargetVector, _throwItem.FailOffset);
                 
         Debug.Log("AAA _failTargetVector : " + _failTargetVector);
+        Debug.Log("AAA _throwItem.FailOffset : " + _throwItem.FailOffset);
         Debug.Log("AAA middlePoint : " + middlePoint);
         Debug.Log("AAA resultPoint : " + resultPoint);
         Debug.Log("AAA targetPoint : " + targetPoint);
@@ -202,13 +232,15 @@ public class ThrownItemMover : MonoBehaviour
             Debug.Log("seq - OnComplete");
             
             if (_throwItem.IsVerticalRotate)
-                _rigidbody.AddRelativeTorque( new Vector3(-1, 0,0 ) * 1500, ForceMode.Impulse);
+                _rigidbody.AddRelativeTorque( new Vector3(-1, 0,0 ) * 2, ForceMode.Impulse);
+                // _rigidbody.AddRelativeTorque( new Vector3(-1, 0,0 ) * 1500, ForceMode.Impulse);
 
             if (_throwItem.IsGorizontalMoving)
                 koef = 2;
             
             var forceVector = new Vector3(_failTargetVector.x, 0, _failTargetVector.z);
-            _rigidbody.AddForce(forceVector.normalized * 15000 * koef);
+            // _rigidbody.AddForce(forceVector.normalized * 15000 * koef);
+            _rigidbody.AddForce(forceVector.normalized * 150 * koef);
         });
         
         Destroy(gameObject,10);
