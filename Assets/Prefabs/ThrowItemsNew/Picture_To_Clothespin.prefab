@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1143457714002690010}
   - component: {fileID: 1021810739088720727}
   - component: {fileID: 3951406135201326733}
+  - component: {fileID: 7618841426265715198}
   m_Layer: 0
   m_Name: Picture_To_Clothespin
   m_TagString: Untagged
@@ -110,6 +111,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &7618841426265715198
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659675067818207757}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 19, z: 1}
+  m_Center: {x: 0, y: 0, z: -0}
 --- !u!1 &3612820997392695460
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,7 +135,6 @@ GameObject:
   - component: {fileID: 4302785862077659272}
   - component: {fileID: 3338559356082818719}
   - component: {fileID: 866067680443764317}
-  - component: {fileID: 3955343474567220736}
   m_Layer: 0
   m_Name: Child
   m_TagString: Untagged
@@ -193,16 +206,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3955343474567220736
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3612820997392695460}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
