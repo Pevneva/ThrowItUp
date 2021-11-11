@@ -4,9 +4,208 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf6fe296-36a0-40c2-8387-724cef7eeb69" name="Default Changelist" comment="Improved camera moving.">
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+    <list default="true" id="bf6fe296-36a0-40c2-8387-724cef7eeb69" name="Default Changelist" comment="Imported Unity Recorder.">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ThrowItUp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ThrowItUp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Models.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Models/Cloud_Cumulus.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Models/Cloud_Cumulus.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Models/Cloud_Cumulus_Fluffy.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Models/Cloud_Cumulus_Fluffy.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Models/Cloud_Cumulus_Med.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Models/Cloud_Cumulus_Med.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Models/Cloud_Strato.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Models/Cloud_Strato.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Models/Cloud_Swirls.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Models/Cloud_Swirls.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Models/Cloud_Swirls_Small.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Models/Cloud_Swirls_Small.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Models/Clouds_cumulonimbus.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Models/Clouds_cumulonimbus.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Models/Clouds_stratus.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Models/Clouds_stratus.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Models/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Models/Materials/Cloud_cumulus.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Models/Materials/Cloud_cumulus.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Models/Materials/Clouds_Strato.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Models/Materials/Clouds_Strato.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Models/Materials/Clouds_Swirls.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Models/Materials/Clouds_Swirls.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Models/Materials/Clouds_cumulonimbus.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Models/Materials/Clouds_cumulonimbus.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Models/Materials/Clouds_cumulus_puffy.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Models/Materials/Clouds_cumulus_puffy.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Models/Materials/Clouds_stratus.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Models/Materials/Clouds_stratus.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Prefabs/Clouds_Cumulonimbus_G1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Prefabs/Clouds_Cumulonimbus_G1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Prefabs/Clouds_Cumulonimbus_G2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Prefabs/Clouds_Cumulonimbus_G2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Prefabs/Clouds_Cumulus_G1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Prefabs/Clouds_Cumulus_G1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Prefabs/Clouds_Cumulus_G2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Prefabs/Clouds_Cumulus_G2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Prefabs/Clouds_Strato_G1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Prefabs/Clouds_Strato_G1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Prefabs/Clouds_Strato_G2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Prefabs/Clouds_Strato_G2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Prefabs/Clouds_Stratus_G1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Prefabs/Clouds_Stratus_G1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Prefabs/Clouds_Stratus_G2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Prefabs/Clouds_Stratus_G2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Prefabs/Clouds_Swirls_G1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Prefabs/Clouds_Swirls_G1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Prefabs/Clouds_Swirls_G2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Prefabs/Clouds_Swirls_G2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Scenes/Clouds Test Scene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Scenes/Clouds Test Scene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Scenes/Clouds Test SceneSettings.lighting" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3LE Low Poly Cloud Pack/Scenes/Clouds Test SceneSettings.lighting.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Backgrounds.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Backgrounds/sky.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Backgrounds/sky.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Materials/Back.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Materials/Back.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Materials/Back_2.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Materials/Back_2.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Materials/Back_Clouds.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Materials/Back_Clouds.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Materials/BottleNew.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Materials/BottleNew.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Materials/Disk 1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Materials/Disk 1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Materials/Disk.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/Materials/Disk.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Materials/Disk.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/Materials/Disk.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Materials/Skybox.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Materials/Skybox.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Materials/bottle_crishka_red.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Materials/bottle_crishka_red.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Materials/sky.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/Materials/sky.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Materials/sky.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/Materials/sky.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Models/14313_Straight_Leg_Coffee_Table-Pine_V1_l1 1.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Models/14313_Straight_Leg_Coffee_Table-Pine_V1_l1 1.obj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Models/14313_Straight_Leg_Coffee_Table-Pine_V1_l1.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Models/14313_Straight_Leg_Coffee_Table-Pine_V1_l1.obj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Models/Sofa 1.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Models/Sofa 1.obj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Models/Sofa.obj.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/Models/Sofa.obj.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Models/bottle_2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Models/bottle_2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Models/table 1.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Models/table 1.obj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Models/table.obj.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/Models/table.obj.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItems.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TargetItems.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItems/Battles_For_Disk.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItems/Battles_For_Disk.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItems/Bottle_For_Ball.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItems/Bottle_For_Ball.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItems/Bottle_For_Bottle.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItems/Bottle_For_Bottle.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItems/Bottle_For_Disk.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItems/Bottle_For_Disk.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItems/Clothespin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TargetItems/Clothespin.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItems/Clothespin.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TargetItems/Clothespin.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItems/Needle_For_Ball.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItems/Needle_For_Ball.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItemsNew.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItemsNew/Old.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItemsNew/Old/2_bottle_for_bottle_new_ЩДВ.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItemsNew/Old/2_bottle_for_bottle_new_ЩДВ.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItemsNew/Old/Battles_For_Disk_2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItemsNew/Old/Battles_For_Disk_2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItemsNew/Old/Bottle_For_Ball_2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItemsNew/Old/Bottle_For_Ball_2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItemsNew/Old/Bottle_For_Bottle.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItemsNew/Old/Bottle_For_Bottle.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItemsNew/Old/Bottle_For_Disk.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItemsNew/Old/Bottle_For_Disk.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItemsNew/bottle.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItemsNew/bottle.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItemsNew/clothespin.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItemsNew/clothespin.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItemsNew/needle.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItemsNew/needle.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItemsNew/two_bottles.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItemsNew/two_bottles.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Ball_To_Bootle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Ball_To_Bootle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Ball_To_Bootle.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Ball_To_Bootle.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Ball_To_Needle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Ball_To_Needle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Ball_To_Needle.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Ball_To_Needle.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Bottle_To_Bottle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Bottle_To_Bottle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Bottle_To_Bottle.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Bottle_To_Bottle.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Disk_To_Bottles.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Disk_To_Bottles.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Disk_To_One_Bottle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Disk_To_One_Bottle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Disk_To_One_Bottle.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Disk_To_One_Bottle.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Picture_To_Clothespin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Picture_To_Clothespin.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Picture_To_Clothespin.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Picture_To_Clothespin.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Picture_To_Needle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Picture_To_Needle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Picture_To_Needle.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Picture_To_Needle.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItemsNew.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItemsNew/Ball_To_Bootle.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItemsNew/Ball_To_Bootle.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItemsNew/Ball_To_Needle.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItemsNew/Ball_To_Needle.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItemsNew/Bottle_to_bottle.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItemsNew/Bottle_to_bottle.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItemsNew/Disk_To_One_Bottle.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItemsNew/Disk_To_One_Bottle.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItemsNew/Disk_To_Two_Bottles.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItemsNew/Disk_To_Two_Bottles.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItemsNew/Old.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItemsNew/Old/2_Picture_To_Needle_old.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItemsNew/Old/2_Picture_To_Needle_old.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItemsNew/Old/Bottle_To_Bottle.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItemsNew/Old/Bottle_To_Bottle.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItemsNew/Old/Picture_To_Clothespin_2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItemsNew/Old/Picture_To_Clothespin_2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItemsNew/Old/new _Picture_To_Clothespin_2 1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItemsNew/Old/new _Picture_To_Clothespin_2 1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItemsNew/Picture_To_Clothespin.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItemsNew/Picture_To_Clothespin.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItemsNew/Picture_To_Needle.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItemsNew/Picture_To_Needle.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game2.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game2.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameNew.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameNew.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bezier.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bezier.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FXUtils.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FXUtils.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FailedPlace.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FailedPlace.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelUtils.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelUtils.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LogPrint.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LogPrint.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Target.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Target.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TargetPlace.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TargetPlace.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ThrowChecker.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ThrowChecker.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ThrowItInput.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ThrowItInput.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ThrowItem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ThrowItem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ThrownItemMover.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ThrownItemMover.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VectorUtils.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VectorUtils.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Soja Exiles.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Soja Exiles/Bar &amp; Liquor Cabinets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Soja Exiles/Bar &amp; Liquor Cabinets/Models.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Soja Exiles/Bar &amp; Liquor Cabinets/Models/wine bottle 04.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Soja Exiles/Bar &amp; Liquor Cabinets/Models/wine bottle 04.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Soja Exiles/Bar &amp; Liquor Cabinets/Models/wine bottle 04_LP.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Soja Exiles/Bar &amp; Liquor Cabinets/Models/wine bottle 04_LP.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +231,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE1F8EF4-975B-4EAC-BEB0-ACCC1B22C9B0/ac/c4829478/DOTweenComponent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Unity/Hub/Editor/2021.1.9f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/ScrollRect.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/37D72605-AF18-44CA-A1A2-0AFA6D236C19/73/58dacb51/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/CameraMove.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/37D72605-AF18-44CA-A1A2-0AFA6D236C19/17/1d2072c1/UnityAction.cs" root0="SKIP_HIGHLIGHTING" />
@@ -39,7 +239,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE1F8EF4-975B-4EAC-BEB0-ACCC1B22C9B0/eb/e2ab3f82/PathType.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/CameraMove.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Prefabs/ThrowItems/Ball_To_Bootle.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LogPrint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TempTest2.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE1F8EF4-975B-4EAC-BEB0-ACCC1B22C9B0/ff/6ca5bd13/TweenerCore`3.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/CameraMove.cs" root0="SKIP_HIGHLIGHTING" />
@@ -49,8 +248,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraMove.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/CameraMove.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.5.5/Editor/Window/TimelineWindow_TrackGui.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE1F8EF4-975B-4EAC-BEB0-ACCC1B22C9B0/08/b2385e14/ShortcutExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FXUtils.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scenes/Game2.unity" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -175,7 +374,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636624953192</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Imported Unity Recorder.">
+      <created>1636625446800</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1636625446800</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,7 +410,8 @@
     <MESSAGE value="Added win camera moving." />
     <MESSAGE value="Added new levels. Added fx and camera moving. Changed size and color of items." />
     <MESSAGE value="Improved camera moving." />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved camera moving." />
+    <MESSAGE value="Imported Unity Recorder." />
+    <option name="LAST_COMMIT_MESSAGE" value="Imported Unity Recorder." />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

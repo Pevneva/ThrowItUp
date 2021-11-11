@@ -33,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 1293499467552606902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -167, y: 70, z: -35.7}
-  m_LocalScale: {x: 25, y: 0.05, z: 25}
+  m_LocalScale: {x: 1.5, y: 0.001, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isVerticalRotate: 0
   _isGorizontalRotate: 0
-  _passOffsetY: 37.5
+  _passOffsetY: 1.72
   _failOffset: 0.3
   _isGorizontalMoving: 1
   _heightThrownIfVertical: 100
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speedHorizontalRotation: 20
   _speedVerticalRotation: 7
-  _speedMoving: 200
+  _speedMoving: 15
 --- !u!114 &2416902998537386439
 MonoBehaviour:
   m_ObjectHideFlags: 0

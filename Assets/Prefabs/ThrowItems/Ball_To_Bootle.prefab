@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 5410684000588883814}
   - component: {fileID: 2753146765865900721}
   - component: {fileID: 8007927502515641043}
-  - component: {fileID: 6913690354201744683}
   - component: {fileID: 3396732414482731957}
+  - component: {fileID: 6913690354201744683}
   - component: {fileID: 4238339918519686534}
   - component: {fileID: 6923764688979377480}
   m_Layer: 0
@@ -33,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 5892912956233130062}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -129.13434, y: 63.1, z: 5}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -117,6 +117,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3396732414482731957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5892912956233130062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd0b4e7fdbf413f43b8497fa8a166bf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speedHorizontalRotation: 3
+  _speedVerticalRotation: 0.5
+  _speedMoving: 200
 --- !u!114 &6913690354201744683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,26 +146,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isVerticalRotate: 0
   _isGorizontalRotate: 0
-  _passOffsetY: 45.2
-  _failOffset: 5
+  _passOffsetY: 2.23
+  _failOffset: 0.35
   _isGorizontalMoving: 0
-  _heightThrownIfVertical: 80
+  _heightThrownIfVertical: 5
   _isNeedRotateToPass: 0
---- !u!114 &3396732414482731957
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5892912956233130062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd0b4e7fdbf413f43b8497fa8a166bf6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speedHorizontalRotation: 20
-  _speedVerticalRotation: 7
-  _speedMoving: 200
 --- !u!114 &4238339918519686534
 MonoBehaviour:
   m_ObjectHideFlags: 0
