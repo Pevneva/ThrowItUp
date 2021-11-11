@@ -27,6 +27,7 @@ public class CameraMove : MonoBehaviour
     public void InitCamera()
     {
         _seq.Kill();
+        _isRotation = false;
         transform.position = _startPosition;
         transform.rotation = Quaternion.Euler(_startRotation);
         Camera.main.fieldOfView = 70;
@@ -37,8 +38,8 @@ public class CameraMove : MonoBehaviour
         _seq = DOTween.Sequence();
         Vector3 cameraWinPosition =
             new Vector3(transform.position.x - 0.25f, transform.position.y + 1.05f, transform.position.z);
-        _seq.Append(transform.DOMove(cameraWinPosition,0.25f)).SetEase(Ease.Linear);
-        _seq.Insert(0f, Camera.main.DOFieldOfView(40, duration + 1.5f));
+        _seq.Append(transform.DOMove(cameraWinPosition,0.35f)).SetEase(Ease.Linear);
+        _seq.Insert(0f, Camera.main.DOFieldOfView(40, duration + 2f));
         
         _targetPosition = targetPosition;
         Invoke(nameof(StartRotation), duration);
