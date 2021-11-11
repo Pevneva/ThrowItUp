@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2200375488517311581}
   - component: {fileID: 3618948080375758686}
   m_Layer: 0
-  m_Name: pCylinder2
+  m_Name: bottle_up_red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

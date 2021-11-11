@@ -5,7 +5,7 @@ using UnityEngine;
 using DG.Tweening;
 using UnityEngine.Serialization;
 
-public class CameraMove : MonoBehaviour
+public class CameraMoving : MonoBehaviour
 {
     [SerializeField] private Vector3 _startPosition;
     [SerializeField] private Vector3 _startRotation;
