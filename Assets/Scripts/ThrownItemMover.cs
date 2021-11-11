@@ -54,17 +54,15 @@ public class ThrownItemMover : MonoBehaviour
         Sequence seq = DOTween.Sequence();
         _duration = Vector3.Distance(transform.position, middlePoint) / _speedMoving;
         _startQuaternion = transform.rotation;
-        _cameraMove.MoveIfWin(_duration);
-        
+
         var durationInFrames = _duration * 2 / Time.fixedDeltaTime;
         _durationInFrames = Mathf.FloorToInt(durationInFrames);
-        
-        Debug.Log("QQQ : " + new Vector3(targetPoint.x, targetPoint.y + _throwItem.PassOffsetY, targetPoint.z));
-        Debug.Log("targetPoint.y : " + targetPoint.y);
-        Debug.Log("_throwItem.PassOffsetY : " + _throwItem.PassOffsetY);
+
+        Vector3 targetPointResult = new Vector3(targetPoint.x, targetPoint.y + _throwItem.PassOffsetY, targetPoint.z);
+        _cameraMove.MoveIfWin(_duration * 2, targetPointResult);
         
         seq.Append(transform.DOMove(middlePoint, _duration).SetEase(Ease.Linear));
-        seq.Append(transform.DOMove(new Vector3(targetPoint.x, targetPoint.y + _throwItem.PassOffsetY, targetPoint.z), _duration)
+        seq.Append(transform.DOMove(targetPointResult, _duration)
             .SetEase(Ease.Linear)
             .OnComplete(() => DoWin())); 
         

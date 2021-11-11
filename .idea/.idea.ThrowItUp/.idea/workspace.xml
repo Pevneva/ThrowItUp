@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf6fe296-36a0-40c2-8387-724cef7eeb69" name="Default Changelist" comment="Added new levels. Added fx and camera moving. Changed size and color of items.">
+    <list default="true" id="bf6fe296-36a0-40c2-8387-724cef7eeb69" name="Default Changelist" comment="Fixed ground collider.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ThrowItUp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ThrowItUp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraMove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ThrownItemMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ThrownItemMover.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,14 +31,20 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/37D72605-AF18-44CA-A1A2-0AFA6D236C19/73/58dacb51/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/37D72605-AF18-44CA-A1A2-0AFA6D236C19/17/1d2072c1/UnityAction.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE1F8EF4-975B-4EAC-BEB0-ACCC1B22C9B0/eb/e2ab3f82/PathType.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Prefabs/ThrowItems/Ball_To_Bootle.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LogPrint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TempTest2.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE1F8EF4-975B-4EAC-BEB0-ACCC1B22C9B0/ff/6ca5bd13/TweenerCore`3.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/CameraMove.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/CameraMove.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/CameraMove.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraMove.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/CameraMove.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE1F8EF4-975B-4EAC-BEB0-ACCC1B22C9B0/08/b2385e14/ShortcutExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FXUtils.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scenes/Game2.unity" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -48,11 +55,11 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/ThrowChecker.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ThrowItInput.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/TempTest2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/CameraMove.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelUtils.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WinPanel.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/FXUtils.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ThrownItemMover.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CameraMove.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="206NHDhW8oWBI7ysd8LRQCNPe9H" />

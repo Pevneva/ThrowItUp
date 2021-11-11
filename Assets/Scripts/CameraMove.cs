@@ -8,20 +8,19 @@ using UnityEngine.Serialization;
 public class CameraMove : MonoBehaviour
 {
     [SerializeField] private Vector3 _startPosition;
-    [SerializeField] private Vector3 _endPosition;
     [SerializeField] private Vector3 _startRotation;
     [SerializeField] private Vector3 _endRotation;
     [SerializeField] private Vector3[] _wayPoints;
-    [SerializeField] private Transform _targetPosition;
     
     private ThrownItemMover _thrownItemMover;
     private bool _isMovingEnded;
     private Sequence _seq;
-    // private float _duration;
+    private bool _isRotation;
+    private Quaternion _lookRotation;
+    private Vector3 _targetPosition;
     
     private void Start()
     {
-        // _duration = 1.4f; //to do mover duration + 1 sec
         InitCamera();
     }
 
@@ -30,15 +29,38 @@ public class CameraMove : MonoBehaviour
         _seq.Kill();
         transform.position = _startPosition;
         transform.rotation = Quaternion.Euler(_startRotation);
+        Camera.main.fieldOfView = 70;
     }
 
-    public void MoveIfWin(float duration)
+    public void MoveIfWin(float duration, Vector3 targetPosition)
     {
         _seq = DOTween.Sequence();
-        Tween moving = transform.DOPath(_wayPoints, duration + 1, PathType.CatmullRom).SetEase(Ease.Linear);//.SetLookAt(0.5f);
-        Tween rotation = transform.DORotate(_endRotation, 0.6f);
-        _seq.Append(moving);
-        _seq.Insert(duration + 1 - 0.4f, rotation);
-        // _seq.Insert(duration + 1 - 0.2f, rotation);
+        Vector3 cameraWinPosition =
+            new Vector3(transform.position.x - 0.25f, transform.position.y + 1.05f, transform.position.z);
+        _seq.Append(transform.DOMove(cameraWinPosition,0.25f)).SetEase(Ease.Linear);
+        _seq.Insert(0f, Camera.main.DOFieldOfView(40, duration + 1.5f));
+        
+        _targetPosition = targetPosition;
+        Invoke(nameof(StartRotation), duration);
+        Invoke(nameof(EndRotation), duration + 1.5f);
+    }
+
+    private void StartRotation()
+    {
+        _isRotation = true;
+    }
+
+    private void EndRotation()
+    {
+        _isRotation = false;
+    }
+
+    private void Update()
+    {
+        if (_isRotation)
+        {
+            _lookRotation = Quaternion.LookRotation(_targetPosition - transform.position);
+            transform.rotation = Quaternion.Lerp(transform.rotation, _lookRotation, Time.deltaTime * 1.35f);
+        }
     }
 }
