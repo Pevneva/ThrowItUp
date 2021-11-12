@@ -30,7 +30,6 @@ public class ThrownItemMover : MonoBehaviour
     private int _countHorizontalRotationsInt;
     private float _countHorizontalRotationsFloat;
     private float _speedHorizontalRotation2;
-
     private int counter;
     private int _durationInFrames;
 
@@ -120,51 +119,29 @@ public class ThrownItemMover : MonoBehaviour
         }
     }
 
-    private Vector3 GetFirstColliderPoint(Vector3 startRay, Vector3 endRay, float offset)
+    private Vector3 GetFirstColliderPoint(Vector3 startPoint, Vector3 direction, float offset)
     {
         var resultPoint = Vector3.zero;
-        
-        _ray = new Ray(startRay, endRay);
-        // var rayLeft = new Ray(startRay - new Vector3(_throwItem.FailOffset * 2,0,0), endRay);
-        // var rayRight = new Ray(startRay + new Vector3(_throwItem.FailOffset * 2,0,0), endRay);
-        Physics.Raycast(_ray, out RaycastHit hit);
-        // Physics.Raycast(rayLeft, out RaycastHit hitLeft);
-        // Physics.Raycast(rayRight, out RaycastHit hitRight);
-        
-        Debug.Log("_ray: " + _ray);
-        // Debug.Log("rayLeft: " + (startRay - new Vector3(_throwItem.FailOffset,0,0)));
-        // Debug.Log("rayRight: " + (startRay + new Vector3(_throwItem.FailOffset,0,0)));
+        var collider = GetComponent<Collider>();
 
-        if (hit.collider != null)
+        if (_throwItem.IsGorizontalMoving)
+            direction = new Vector3(direction.x, 0, direction.z);
+
+        if (collider != null)
         {
-            resultPoint = VectorUtils.GetPointOnVectorByDistance(startRay, endRay, hit.distance - offset);
-        }
-        else if (_throwItem.IsGorizontalMoving)
-        {
-            var endVector = new Vector3(endRay.x, 0, endRay.z);
+            CastType castType;
             
-            _ray = new Ray(startRay, endVector);
-            Physics.Raycast(_ray, out RaycastHit hit2);
+            if (GetComponent<BoxCollider>() != null)
+                castType = CastType.BOX;
+            else if (GetComponent<SphereCollider>() != null)
+                castType = CastType.SPHERE;
+            else 
+                castType = CastType.NONE;
 
-            if (hit2.collider != null)
-            {
-                resultPoint = VectorUtils.GetPointOnVectorByDistance(startRay, endVector, hit2.distance - offset);
-                Debug.Log("RRR resultPoint : " + resultPoint);
-                Debug.Log("RRR hit2.distance : " + hit2.distance);
-                Debug.Log("RRR offset : " + offset);
-                Debug.Log("RRR size : " + _throwItem.GetComponentInChildren<Collider>().bounds.size);
-            }
-                
-            // else if (_throwItem.GetComponent<BoxCollider>() != null)
-            // {
-            //     var collider = GetComponent<BoxCollider>();
-            //     RaycastHit hitBoxcast = new RaycastHit();
-            //     Physics.BoxCast(collider.bounds.center, transform.localScale, transform.forward, out hitBoxcast, transform.rotation, 100);
-            //     
-            //     if (hitBoxcast.collider != null)
-            //         resultPoint = VectorUtils.GetPointOnVectorByDistance(startRay, endVector, hit2.distance - offset);
-            // }
+            resultPoint = HitCastUtils.GetHitPoint(castType, collider, startPoint, direction, offset);
+            Debug.Log(" TRUE resultPoint : " + resultPoint);
         }
+        
         return resultPoint;
     }
     
@@ -227,17 +204,16 @@ public class ThrownItemMover : MonoBehaviour
             Physics.gravity = new Vector3(0, -23F, 0);
             
             var koef = 1;
-            Debug.Log("seq - OnComplete");
             
             if (_throwItem.IsVerticalRotate)
                 _rigidbody.AddRelativeTorque( new Vector3(-1, 0,0 ) * 2, ForceMode.Impulse);
-                // _rigidbody.AddRelativeTorque( new Vector3(-1, 0,0 ) * 1500, ForceMode.Impulse);
 
             if (_throwItem.IsGorizontalMoving)
                 koef = 2;
             
             var forceVector = new Vector3(_failTargetVector.x, 0, _failTargetVector.z);
-            // _rigidbody.AddForce(forceVector.normalized * 15000 * koef);
+            Debug.Log("TRUE AddForce : " + forceVector.normalized * 150 * koef);
+            Debug.Log("TRUE AddRelativeTorque : " + new Vector3(-1, 0,0 ) * 2);
             _rigidbody.AddForce(forceVector.normalized * 150 * koef);
         });
         

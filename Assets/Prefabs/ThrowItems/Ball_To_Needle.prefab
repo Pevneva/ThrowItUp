@@ -132,7 +132,7 @@ MonoBehaviour:
   _isVerticalRotate: 0
   _isGorizontalRotate: 0
   _passOffsetY: 1.34
-  _failOffset: 0.35
+  _failOffset: 0.08
   _isGorizontalMoving: 0
   _heightThrownIfVertical: 5
   _isNeedRotateToPass: 0

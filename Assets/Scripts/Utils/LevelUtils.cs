@@ -38,15 +38,6 @@ public class LevelUtils : MonoBehaviour
         _fxUtils.HideWinFxImmediately();
     }
 
-    private void OnDisable()
-    {
-        foreach (var throwItem in _throwItemsPrefabs)
-        {
-            throwItem.GetComponent<ThrownItemMover>().LevelPassed -= OnLevelPassed;
-            throwItem.GetComponent<ThrownItemMover>().LevelFailed -= OnLevelFailed;
-        }
-    }
-
     public void InitLevelItems()
     {
         _targetItem = Instantiate(_targetItemsPrefabs[(Level-1) % _throwItemsPrefabs.Length], _targetPosition.position, Quaternion.identity);

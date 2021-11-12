@@ -24,11 +24,13 @@ public class ThrowChecker : MonoBehaviour
     private bool _isClockWiseSwiping;
     
     private float _angleDeviation;
+    private float _allowedAngleDeviation;
     private float _targetAngleWithYAxe;
     private Vector2 _middleVectorPoint;
     
     private void Start()
     {
+        _allowedAngleDeviation = 2.5f;
         _levelUtils = FindObjectOfType<LevelUtils>();
         _throwItem = GetComponent<ThrowItem>();
         _throwItemInput = GetComponent<ThrowItInput>();
@@ -82,6 +84,6 @@ public class ThrowChecker : MonoBehaviour
 
     private bool IsPassed(float angleDeviation)
     {
-        return angleDeviation <= 3;
+        return angleDeviation <= _allowedAngleDeviation;
     }
 }

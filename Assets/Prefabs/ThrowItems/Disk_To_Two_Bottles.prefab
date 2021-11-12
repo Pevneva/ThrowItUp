@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 2416902998537386439}
   - component: {fileID: 4258826035886967259}
   - component: {fileID: 1429770604249641918}
+  - component: {fileID: 4459897556362807052}
   m_Layer: 0
   m_Name: Disk_To_Two_Bottles
   m_TagString: Untagged
@@ -113,11 +114,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1293499467552606902}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.0000001, y: 2, z: 1.0000002}
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Size: {x: 0.70983887, y: 2, z: 0.88908386}
+  m_Center: {x: -0.014444987, y: 0, z: 0.0066731772}
 --- !u!114 &1293499467552606920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,7 +134,7 @@ MonoBehaviour:
   _isVerticalRotate: 0
   _isGorizontalRotate: 0
   _passOffsetY: 1.99
-  _failOffset: 0.3
+  _failOffset: 0.15
   _isGorizontalMoving: 1
   _heightThrownIfVertical: 100
   _isNeedRotateToPass: 0
@@ -188,3 +189,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4524e3d83b801eb43bf21291750d21b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!64 &4459897556362807052
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293499467552606902}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}

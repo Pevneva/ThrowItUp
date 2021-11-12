@@ -4,16 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf6fe296-36a0-40c2-8387-724cef7eeb69" name="Default Changelist" comment="Removed unnecessary resources.">
+    <list default="true" id="bf6fe296-36a0-40c2-8387-724cef7eeb69" name="Default Changelist" comment="Cleared resources.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ThrowItUp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ThrowItUp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Location/Sofa.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Location/Sofa.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Location/Sofa.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Location/Sofa.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Location/Table 1.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Location/Table 1.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Location/Table.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Location/Table.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Location/Table.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Location/Table.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItems/Clothespin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TargetItems/Clothespin.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItems/bottle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TargetItems/bottle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItems/needle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TargetItems/needle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TargetItems/two_bottles.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TargetItems/two_bottles.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Ball_To_Bootle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Ball_To_Bootle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Ball_To_Needle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Ball_To_Needle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Bottle_To_Bottle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Bottle_To_Bottle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Disk_To_One_Bottle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Disk_To_One_Bottle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Disk_To_Two_Bottles.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Disk_To_Two_Bottles.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Picture_To_Clothespin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Picture_To_Clothespin.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Picture_To_Needle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Picture_To_Needle.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Test/TempTest2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Test/TempTest2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Throw/ThrowChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Throw/ThrowChecker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Throw/ThrownItemMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Throw/ThrownItemMover.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/LevelUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/LevelUtils.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,27 +45,31 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE1F8EF4-975B-4EAC-BEB0-ACCC1B22C9B0/ac/c4829478/DOTweenComponent.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/HitCastUtils.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/CameraMove.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Prefabs/ThrowItems/Ball_To_Bootle.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Prefabs/ThrowItems/Picture_To_Needle.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/Test/TempTest2.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE1F8EF4-975B-4EAC-BEB0-ACCC1B22C9B0/ff/6ca5bd13/TweenerCore`3.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/CameraMove.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraMoving.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/CameraMove.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE1F8EF4-975B-4EAC-BEB0-ACCC1B22C9B0/08/b2385e14/ShortcutExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE1F8EF4-975B-4EAC-BEB0-ACCC1B22C9B0/ac/c4829478/DOTweenComponent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity/Hub/Editor/2021.1.9f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/ScrollRect.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/37D72605-AF18-44CA-A1A2-0AFA6D236C19/73/58dacb51/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/CameraMove.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Test/TempTest3.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/37D72605-AF18-44CA-A1A2-0AFA6D236C19/17/1d2072c1/UnityAction.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Prefabs/ThrowItems/Bottle_To_Bottle.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE1F8EF4-975B-4EAC-BEB0-ACCC1B22C9B0/eb/e2ab3f82/PathType.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/CameraMove.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Prefabs/ThrowItems/Ball_To_Bootle.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TempTest2.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE1F8EF4-975B-4EAC-BEB0-ACCC1B22C9B0/ff/6ca5bd13/TweenerCore`3.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/CameraMove.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/ThrownItemMover.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/CameraMove.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/CameraMove.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraMove.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/CameraMove.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.5.5/Editor/Window/TimelineWindow_TrackGui.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE1F8EF4-975B-4EAC-BEB0-ACCC1B22C9B0/08/b2385e14/ShortcutExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scenes/Game2.unity" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -74,6 +86,13 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/FXUtils.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ThrownItemMover.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CameraMove.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CameraMoving.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Test/TempTest3.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Test/TempTest2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Utils/LevelUtils.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Throw/ThrowChecker.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Utils/HitCastUtils.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Throw/ThrownItemMover.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="206NHDhW8oWBI7ysd8LRQCNPe9H" />
@@ -90,6 +109,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -196,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636628078671</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Cleared resources.">
+      <created>1636632208215</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1636632208215</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,7 +254,8 @@
     <MESSAGE value="Improved camera moving." />
     <MESSAGE value="Imported Unity Recorder." />
     <MESSAGE value="Removed unnecessary resources." />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed unnecessary resources." />
+    <MESSAGE value="Cleared resources." />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleared resources." />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

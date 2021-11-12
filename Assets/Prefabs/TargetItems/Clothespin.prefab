@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 980227280681612177}
   - component: {fileID: 8863027966928561690}
   - component: {fileID: 1849298426294188381}
+  - component: {fileID: 5683116551194731547}
   m_Layer: 0
   m_Name: Clothespin
   m_TagString: Untagged
@@ -113,3 +114,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5683116551194731547
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6784421675704925606}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4893734260400097310, guid: 2a45f1eff06c74647ab6b7dedeaf4539, type: 3}
