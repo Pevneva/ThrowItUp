@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: 186726467488364735}
   - component: {fileID: 2416902998537386439}
   - component: {fileID: 4258826035886967259}
-  - component: {fileID: 1429770604249641918}
   - component: {fileID: 4459897556362807052}
   m_Layer: 0
   m_Name: Disk_To_Two_Bottles
@@ -175,18 +174,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ffae31f6b9a72648b68c1c36bdda5b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1429770604249641918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1293499467552606902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4524e3d83b801eb43bf21291750d21b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!64 &4459897556362807052
