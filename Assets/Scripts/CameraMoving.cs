@@ -18,9 +18,11 @@ public class CameraMoving : MonoBehaviour
     private bool _isRotation;
     private Quaternion _lookRotation;
     private Vector3 _targetPosition;
+    private float _startFieldOfView; 
     
     private void Start()
     {
+        _startFieldOfView = Camera.main.fieldOfView;
         InitCamera();
     }
 
@@ -30,7 +32,7 @@ public class CameraMoving : MonoBehaviour
         _isRotation = false;
         transform.position = _startPosition;
         transform.rotation = Quaternion.Euler(_startRotation);
-        Camera.main.fieldOfView = 70;
+        Camera.main.fieldOfView = _startFieldOfView;
     }
 
     public void MoveIfWin(float duration, Vector3 targetPosition)
@@ -39,7 +41,7 @@ public class CameraMoving : MonoBehaviour
         Vector3 cameraWinPosition =
             new Vector3(transform.position.x - 0.25f, transform.position.y + 1.05f, transform.position.z);
         _seq.Append(transform.DOMove(cameraWinPosition,0.35f)).SetEase(Ease.Linear);
-        _seq.Insert(0f, Camera.main.DOFieldOfView(40, duration + 2f));
+        _seq.Insert(0f, Camera.main.DOFieldOfView(_startFieldOfView - 10, duration + 2f));
         
         _targetPosition = targetPosition;
         Invoke(nameof(StartRotation), duration);
