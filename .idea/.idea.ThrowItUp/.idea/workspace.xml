@@ -4,13 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf6fe296-36a0-40c2-8387-724cef7eeb69" name="Default Changelist" comment="Fixed collisions with items.">
+    <list default="true" id="bf6fe296-36a0-40c2-8387-724cef7eeb69" name="Default Changelist" comment="Improved processing of camera fieldOfView.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ThrowItUp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ThrowItUp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Ball_To_Bootle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Ball_To_Bootle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Ball_To_Needle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Ball_To_Needle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Disk_To_One_Bottle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Disk_To_One_Bottle.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Disk_To_Two_Bottles.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Disk_To_Two_Bottles.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Picture_To_Clothespin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Picture_To_Clothespin.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Picture_To_Needle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ThrowItems/Picture_To_Needle.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraMoving.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraMoving.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Throw/ThrowItInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Throw/ThrowItInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Test/TempTest2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Test/TempTest2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/FXUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/FXUtils.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/LevelUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/LevelUtils.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,14 +41,29 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/HitCastUtils.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/CameraMove.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Prefabs/ThrowItems/Ball_To_Bootle.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/CameraMoving.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Prefabs/ThrowItems/Picture_To_Needle.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/Test/TempTest2.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/CameraMoving.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Trails FX/Scripts/TrailEffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/CameraMoving.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE1F8EF4-975B-4EAC-BEB0-ACCC1B22C9B0/ac/c4829478/DOTweenComponent.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/CameraMoving.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Unity/Hub/Editor/2021.1.9f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Layout/ILayoutElement.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/37D72605-AF18-44CA-A1A2-0AFA6D236C19/73/58dacb51/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scenes/TestScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/CameraMove.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/ThrownItemMover.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/HitCastUtils.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/CameraMoving.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scenes/Game.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/CameraMove.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Prefabs/ThrowItems/Ball_To_Bootle.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Prefabs/ThrowItems/Disk_To_Two_Bottles.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/CameraMoving.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE1F8EF4-975B-4EAC-BEB0-ACCC1B22C9B0/ff/6ca5bd13/TweenerCore`3.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/CameraMove.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/Throw/ThrowItInput.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.5.5/Runtime/Animation/AnimationPlayableAsset.cs" root0="SKIP_HIGHLIGHTING" />
@@ -53,22 +74,19 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.5.5/Runtime/Animation/AnimationTrack.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE1F8EF4-975B-4EAC-BEB0-ACCC1B22C9B0/08/b2385e14/ShortcutExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/37D72605-AF18-44CA-A1A2-0AFA6D236C19/c7/c09a4071/Camera.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE1F8EF4-975B-4EAC-BEB0-ACCC1B22C9B0/ac/c4829478/DOTweenComponent.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Unity/Hub/Editor/2021.1.9f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Layout/ILayoutElement.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity/Hub/Editor/2021.1.9f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/ScrollRect.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/37D72605-AF18-44CA-A1A2-0AFA6D236C19/73/58dacb51/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/CameraMove.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Test/TempTest3.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/37D72605-AF18-44CA-A1A2-0AFA6D236C19/17/1d2072c1/UnityAction.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Prefabs/ThrowItems/Bottle_To_Bottle.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE1F8EF4-975B-4EAC-BEB0-ACCC1B22C9B0/eb/e2ab3f82/PathType.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/CameraMoving.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity/Hub/Editor/2021.1.9f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/UIElements/PanelEventHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/CameraMove.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/ThrownItemMover.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scripts/CameraMove.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.5.5/Editor/Window/TimelineWindow_TrackGui.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Test/ExampleClass.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scenes/Game.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://E:/Unity_Projects/ThrowItUp/ThrowItUp/Assets/Scenes/Game2.unity" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -86,15 +104,16 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/ThrownItemMover.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CameraMove.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Test/TempTest3.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Test/TempTest2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utils/HitCastUtils.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Throw/ThrowChecker.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Utils/LevelUtils.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Throw/ThrownItemMover.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/CameraMoving.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Test/ExampleClass.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/LineRendering.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Throw/ThrowItInput.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CameraMoving.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Utils/FXUtils.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Test/TempTest2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Utils/LevelUtils.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="206NHDhW8oWBI7ysd8LRQCNPe9H" />
@@ -232,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636711529377</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Improved processing of camera fieldOfView.">
+      <created>1636895314908</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1636895314908</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,7 +291,8 @@
     <MESSAGE value="Removed unnecessary resources." />
     <MESSAGE value="Cleared resources." />
     <MESSAGE value="Fixed collisions with items." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed collisions with items." />
+    <MESSAGE value="Improved processing of camera fieldOfView." />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved processing of camera fieldOfView." />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

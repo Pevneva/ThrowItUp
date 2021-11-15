@@ -41,7 +41,7 @@ public class CameraMoving : MonoBehaviour
         Vector3 cameraWinPosition =
             new Vector3(transform.position.x - 0.25f, transform.position.y + 1.05f, transform.position.z);
         _seq.Append(transform.DOMove(cameraWinPosition,0.35f)).SetEase(Ease.Linear);
-        _seq.Insert(0f, Camera.main.DOFieldOfView(_startFieldOfView - 10, duration + 2f));
+        _seq.Insert(0f, Camera.main.DOFieldOfView(_startFieldOfView - 30, duration + 2f));
         
         _targetPosition = targetPosition;
         Invoke(nameof(StartRotation), duration);

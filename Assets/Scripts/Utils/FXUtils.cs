@@ -5,6 +5,7 @@ public class FXUtils : MonoBehaviour
 {
     [SerializeField] private GameObject _winFx1;
     [SerializeField] private GameObject _winFx2;
+    // [SerializeField] private GameObject _flyFx;
 
     private bool _isSecondWinFXShowing;
 
@@ -33,12 +34,12 @@ public class FXUtils : MonoBehaviour
             _winFx2.SetActive(true);
     }
 
-    public void HideWinFx1()
+    private void HideWinFx1()
     {
         _winFx1.SetActive(false);
     }
     
-    public void HideWinFx2()
+    private void HideWinFx2()
     {
         _winFx2.SetActive(false);
     }

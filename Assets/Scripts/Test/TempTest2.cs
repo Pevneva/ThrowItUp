@@ -5,8 +5,12 @@ using UnityEngine;
 
 public class TempTest2 : MonoBehaviour
 {
+    [SerializeField] private TrailRenderer _trail;
+ 
     private Vector3 _colliderExtens;
-    void Start()
+    private GameObject _parentTrail;
+    
+    private void Start()
     {
         // // var bounds1 = GetComponent<MeshFilter>().sharedMesh.bounds;
         // var bounds2 = GetComponentInChildren<Collider>().bounds;
@@ -15,7 +19,24 @@ public class TempTest2 : MonoBehaviour
         // Debug.Log("bounds collider: " + bounds2);
         // Debug.Log("GameObject : " + gameObject.name + "; z: " + bounds2.extents.z);
 
-        GetFirstColliderPoint();
+        // GetFirstColliderPoint();
+        // _trail = GetComponent<TrailRenderer>();
+        _trail.emitting = false;
+        
+        ThrowItInput item = GetComponent<ThrowItInput>();
+        item.SwipeDone += DoTrail;
+
+
+    }
+
+    private void DoTrail(Vector2 direction)
+    {
+        _trail.Clear();
+        Invoke(nameof(StartTrail), 0.25f);
+    }
+    private void StartTrail()
+    {
+        _trail.emitting = true;
     }
 
     private void Update()
