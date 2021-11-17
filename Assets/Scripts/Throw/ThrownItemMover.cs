@@ -44,7 +44,7 @@ public class ThrownItemMover : MonoBehaviour
         _rigidbody.isKinematic = true;
         // _duration = 0.5f;
         _rigidbody.mass = 5;
-        _speedMoving = 15;
+        // _speedMoving = 10;
         // _speedHorizontalRotation = 0.03f;
     }
 
@@ -113,6 +113,7 @@ public class ThrownItemMover : MonoBehaviour
             counter++;
             _angle1 +=  (float)(180 * _countHorizontalRotationsInt)/(_durationInFrames);
             _angle2 += Time.fixedDeltaTime * 90 / (_duration * 2);
+            // _angle2 += Time.fixedDeltaTime * 90 / (_duration * 2);
             Quaternion q1 = Quaternion.AngleAxis(_angle1, Vector3.up);
             Quaternion q2 = Quaternion.AngleAxis(_angle2, Vector3.forward);
             transform.rotation = _startQuaternion * q2 * q1;

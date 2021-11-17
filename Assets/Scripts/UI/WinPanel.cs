@@ -28,7 +28,9 @@ public class WinPanel : MonoBehaviour
 
     private void OnNextButton()
     {
-        _levelUtils.RemoveOldThrowItems();
+        Debug.Log("CLICK on NEXT");
+        _levelUtils.RemoveTargetItems();
+        _levelUtils.DestroyAllFailThrownItems();
         _levelUtils.IncreaseLevel();
         _levelUtils.InitLevelItems();
         _cameraMoving.InitCamera();

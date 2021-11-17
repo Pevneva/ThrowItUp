@@ -9,6 +9,7 @@ public class TempTest2 : MonoBehaviour
  
     private Vector3 _colliderExtens;
     private GameObject _parentTrail;
+    private MobileBlur _mobileBlur;
     
     private void Start()
     {
@@ -21,10 +22,14 @@ public class TempTest2 : MonoBehaviour
 
         // GetFirstColliderPoint();
         // _trail = GetComponent<TrailRenderer>();
-        _trail.emitting = false;
+
+        _mobileBlur = FindObjectOfType<MobileBlur>();
+        // _mobileBlur.BlurAmount = 2;
         
-        ThrowItInput item = GetComponent<ThrowItInput>();
-        item.SwipeDone += DoTrail;
+        // _trail.emitting = false;
+        //
+        // ThrowItInput item = GetComponent<ThrowItInput>();
+        // item.SwipeDone += DoTrail;
 
 
     }

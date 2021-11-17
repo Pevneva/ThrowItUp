@@ -12,6 +12,7 @@ public class LevelUtils : MonoBehaviour
     [SerializeField] private GameObject[] _throwItemsPrefabs;
     [SerializeField] private GameObject[] _targetItemsPrefabs;
     [SerializeField] private GameObject _menuPanel;
+    [SerializeField] private int _amountAttemtp;
 
     // [SerializeField] private ParticleSystem _flyFxPrefab;
 
@@ -27,6 +28,10 @@ public class LevelUtils : MonoBehaviour
     private FXUtils _fxUtils;
     private List<GameObject> _failThrownItems;
     private ParticleSystem _flyFx;
+    private bool _isBluring;
+    private MobileBlur _mobileBlur;
+    private int _startAttempts;
+    private LineRenderer _lineRenderer;
     
     private void Start()
     {
@@ -38,9 +43,21 @@ public class LevelUtils : MonoBehaviour
 
         _dialogsContainer = FindObjectOfType<DialogsContainer>();
         _fxUtils = FindObjectOfType<FXUtils>();
+        _lineRenderer = FindObjectOfType<LineRenderer>();
         _failThrownItems = new List<GameObject>();
         InitLevelItems();
         _fxUtils.HideWinFxImmediately();
+        _isBluring = false;
+        _mobileBlur = Camera.main.GetComponent<MobileBlur>();
+        _startAttempts = _amountAttemtp;
+    }
+
+    private void Update()
+    {
+        if (_isBluring)
+        {
+            _mobileBlur.BlurAmount = Mathf.Lerp(0f, 2, 1f);
+        }
     }
 
     public void InitLevelItems()
@@ -50,12 +67,6 @@ public class LevelUtils : MonoBehaviour
         _throwItem = _throwItemGO.GetComponentInChildren<ThrowItem>();
         _trail = _throwItemGO.GetComponentInChildren<AraTrail>();
 
-        // _flyFx = Instantiate(_flyFxPrefab, _throwItem.transform);
-        
-        // _flyFX.Play();
-        // var _fxMain = p;
-        // _flyFX.main.duration = 4;
-        
         _throwItem.GetComponent<ThrownItemMover>().LevelPassed += OnLevelPassed;
         _throwItem.GetComponent<ThrownItemMover>().LevelFailed += OnLevelFailed;
         _throwItem.GetComponent<ThrowItInput>().SwipeDone += PlayFlyEffects;
@@ -63,7 +74,8 @@ public class LevelUtils : MonoBehaviour
 
     private void OnLevelPassed()
     {
-        DestroyAllFailThrownItems();
+        _amountAttemtp = _startAttempts;
+        // DestroyAllFailThrownItems();
         _dialogsContainer.ShowWinPanelDialog();
         _menuPanel.SetActive(false);
         _fxUtils.ShowWinFx();
@@ -71,8 +83,23 @@ public class LevelUtils : MonoBehaviour
 
     private void OnLevelFailed()
     {
+        _amountAttemtp--;
         _failThrownItems.Add(_throwItem.gameObject);
-        SetNewThrowItem();
+        
+        if (_amountAttemtp <= 0) 
+            DoEndGame();
+        else
+            SetNewThrowItem();
+    }
+
+    private void DoEndGame()
+    {
+        Level = 0;
+        _isBluring = true;
+        _dialogsContainer.ShowFailScreen();
+        _menuPanel.SetActive(false);
+        Invoke(nameof(RestartGame), 5);
+        _lineRenderer.gameObject.SetActive(false);
     }
 
     public void IncreaseLevel()
@@ -102,7 +129,7 @@ public class LevelUtils : MonoBehaviour
         _throwItem.GetComponent<ThrowItInput>().SwipeDone += PlayFlyEffects;
     }
 
-    public void RemoveOldThrowItems()
+    public void RemoveTargetItems()
     {
         Destroy(_throwItem.gameObject);
         Destroy(_targetItem);
@@ -120,5 +147,21 @@ public class LevelUtils : MonoBehaviour
     {
         // _trail.emit = true;
         // _flyFx.Play();
+    }
+
+    private void RestartGame()
+    {
+        Level = 1;
+        LevelChanged?.Invoke(1);
+        _fxUtils.HideWinFxImmediately();
+        _isBluring = false;
+        _mobileBlur.BlurAmount = 0;
+        _dialogsContainer.HideFailStamp();
+        DestroyAllFailThrownItems();
+        RemoveTargetItems();
+        _amountAttemtp = _startAttempts;
+        InitLevelItems();
+        _lineRenderer.gameObject.SetActive(true);
+        _menuPanel.SetActive(true);
     }
 }
