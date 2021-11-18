@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf6fe296-36a0-40c2-8387-724cef7eeb69" name="Default Changelist" comment="Implemented sounds.">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ThrowItUp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ThrowItUp/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="bf6fe296-36a0-40c2-8387-724cef7eeb69" name="Default Changelist" comment="Added missed files">
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/AudioProcesser.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MenuPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MenuPanel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +39,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/MobileBlur/MobileBlur.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/Cameras/Scripts/FreeLookCam.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE1F8EF4-975B-4EAC-BEB0-ACCC1B22C9B0/ff/6ca5bd13/TweenerCore`3.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Audio/AudioProcesser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Trails FX/Scripts/TrailEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.5.5/Runtime/Animation/AnimationPlayableAsset.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraMoving.cs" root0="FORCE_HIGHLIGHTING" />
@@ -108,6 +109,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Throw/ThrownItemInput.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Audio/AudioPlayer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Audio/AudioProcesser.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/MenuPanel.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="206NHDhW8oWBI7ysd8LRQCNPe9H" />
@@ -162,7 +164,7 @@
       <workItem from="1636057114474" duration="42516000" />
       <workItem from="1637147134041" duration="1842000" />
       <workItem from="1637149068370" duration="4604000" />
-      <workItem from="1637184294614" duration="18214000" />
+      <workItem from="1637184294614" duration="18597000" />
     </task>
     <task id="LOCAL-00001" summary="Init project">
       <created>1635361486939</created>
@@ -290,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637236625631</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Added missed files">
+      <created>1637241626975</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1637241626975</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,7 +338,8 @@
     <MESSAGE value="Addedsome sounds in project." />
     <MESSAGE value="Improved line rendering. Refactored code." />
     <MESSAGE value="Implemented sounds." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented sounds." />
+    <MESSAGE value="Added missed files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added missed files" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

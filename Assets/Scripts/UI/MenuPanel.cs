@@ -45,6 +45,7 @@ public class MenuPanel : MonoBehaviour
         _vibrationPhoneButtton.gameObject.SetActive(false);
         _phoneButtton.gameObject.SetActive(true);
         _isVibrationPhoneShowing = false;
+        Handheld.Vibrate();
     }
     
     private void OnClickPhoneButton()
