@@ -4,6 +4,7 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(ThrowItem), typeof(ThrowChecker), typeof(ThrownItemMover))]
 public class ThrowChecker : MonoBehaviour
 {
     private Vector3 _targetPoint;

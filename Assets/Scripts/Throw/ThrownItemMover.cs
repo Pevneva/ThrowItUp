@@ -8,6 +8,7 @@ using Sequence = DG.Tweening.Sequence;
 using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
 
+[RequireComponent(typeof(ThrowItem), typeof(Rigidbody))]
 public class ThrownItemMover : MonoBehaviour
 {
     [SerializeField] private float _speedHorizontalRotation;
