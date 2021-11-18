@@ -32,6 +32,7 @@ public class LevelUtils : MonoBehaviour
     private MobileBlur _mobileBlur;
     private int _startAttempts;
     private LineRenderer _lineRenderer;
+    private AudioPlayer _audio;
     
     private void Start()
     {
@@ -44,6 +45,7 @@ public class LevelUtils : MonoBehaviour
         _dialogsContainer = FindObjectOfType<DialogsContainer>();
         _fxUtils = FindObjectOfType<FXUtils>();
         _lineRenderer = FindObjectOfType<LineRenderer>();
+        _audio = FindObjectOfType<AudioPlayer>();
         _failThrownItems = new List<GameObject>();
         InitLevelItems();
         _fxUtils.HideWinFxImmediately();
@@ -70,6 +72,9 @@ public class LevelUtils : MonoBehaviour
         _thrownItem.GetComponent<ThrownItemMover>().LevelPassed += OnLevelPassed;
         _thrownItem.GetComponent<ThrownItemMover>().LevelFailed += OnLevelFailed;
         _thrownItem.GetComponent<ThrownItemInput>().SwipeDone += PlayFlyEffects;
+        
+        _audio.PlayBackgroundMusic();
+
     }
 
     private void OnLevelPassed()
@@ -79,6 +84,8 @@ public class LevelUtils : MonoBehaviour
         _dialogsContainer.ShowWinPanelDialog();
         _menuPanel.SetActive(false);
         _fxUtils.ShowWinFx();
+        _audio.PlayWinSound();
+        _audio.StopBackgroundMusic();
     }
 
     private void OnLevelFailed()
@@ -94,12 +101,14 @@ public class LevelUtils : MonoBehaviour
 
     private void DoEndGame()
     {
+        _audio.PlayFailSound();
         Level = 0;
         _isBluring = true;
         _dialogsContainer.ShowFailScreen();
         _menuPanel.SetActive(false);
-        Invoke(nameof(RestartGame), 5);
+        Invoke(nameof(RestartGame), 3.5f);
         _lineRenderer.gameObject.SetActive(false);
+        _audio.StopBackgroundMusic();
     }
 
     public void IncreaseLevel()
@@ -163,5 +172,6 @@ public class LevelUtils : MonoBehaviour
         InitLevelItems();
         _lineRenderer.gameObject.SetActive(true);
         _menuPanel.SetActive(true);
+        _audio.PlayBackgroundMusic();
     }
 }

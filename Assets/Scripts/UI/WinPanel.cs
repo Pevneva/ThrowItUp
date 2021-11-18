@@ -11,6 +11,7 @@ public class WinPanel : MonoBehaviour
     private LevelUtils _levelUtils;
     private CameraMoving _cameraMoving;
     private FXUtils _fxUtils;
+    private AudioPlayer _audio;
 
     public event UnityAction ClickedNextButton; 
 
@@ -19,6 +20,7 @@ public class WinPanel : MonoBehaviour
         _levelUtils = FindObjectOfType<LevelUtils>();
         _cameraMoving = FindObjectOfType<CameraMoving>();
         _fxUtils = FindObjectOfType<FXUtils>();
+        _audio = FindObjectOfType<AudioPlayer>();
         _level.text = "LEVEL " + _levelUtils.Level;
         _next.onClick.AddListener(OnNextButton);
     }
@@ -31,6 +33,8 @@ public class WinPanel : MonoBehaviour
         _levelUtils.InitLevelItems();
         _cameraMoving.InitCamera();
         _fxUtils.HideWinFxImmediately();
+        _audio.StopWinSound();
+        _audio.PlayBackgroundMusic();
         ClickedNextButton?.Invoke();
         Destroy(gameObject);
     }

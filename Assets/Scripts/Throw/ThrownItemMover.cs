@@ -33,6 +33,7 @@ public class ThrownItemMover : MonoBehaviour
     private float _speedHorizontalRotation2;
     private int counter;
     private int _durationInFrames;
+    private AudioPlayer _audio;
 
     public event UnityAction LevelPassed; 
     public event UnityAction LevelFailed;
@@ -42,11 +43,13 @@ public class ThrownItemMover : MonoBehaviour
         _thrownItem = GetComponent<ThrownItem>();
         _rigidbody = GetComponent<Rigidbody>();
         _cameraMoving = FindObjectOfType<CameraMoving>();
+        _audio = FindObjectOfType<AudioPlayer>();
         _rigidbody.isKinematic = true;
         // _duration = 0.5f;
         _rigidbody.mass = 5;
         // _speedMoving = 10;
         // _speedHorizontalRotation = 0.03f;
+        
     }
 
     public void MovePass(Vector3 middlePoint, Vector3 targetPoint, float angle)
@@ -202,6 +205,7 @@ public class ThrownItemMover : MonoBehaviour
         
         seq.OnComplete(() =>
         {
+            _audio.PlayHit();
             _rigidbody.isKinematic = false;
             Physics.gravity = new Vector3(0, -23F, 0);
             
