@@ -4,8 +4,8 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(ThrowItem), typeof(ThrowChecker), typeof(ThrownItemMover))]
-public class ThrowChecker : MonoBehaviour
+[RequireComponent(typeof(ThrownItem), typeof(ThrownItemChecker), typeof(ThrownItemMover))]
+public class ThrownItemChecker : MonoBehaviour
 {
     private Vector3 _targetPoint;
     private Vector3 _startPoint;
@@ -16,8 +16,8 @@ public class ThrowChecker : MonoBehaviour
     private Vector2 _targetScreenDirection;
     
     private LevelUtils _levelUtils;
-    private ThrowItem _throwItem;
-    private ThrowItInput _throwItemInput;
+    private ThrownItem _thrownItem;
+    private ThrownItemInput _throwItemInput;
     private ThrownItemMover _itemMover;
     
     private bool _isPassedMoving;
@@ -33,8 +33,8 @@ public class ThrowChecker : MonoBehaviour
     {
         _allowedAngleDeviation = 2.5f;
         _levelUtils = FindObjectOfType<LevelUtils>();
-        _throwItem = GetComponent<ThrowItem>();
-        _throwItemInput = GetComponent<ThrowItInput>();
+        _thrownItem = GetComponent<ThrownItem>();
+        _throwItemInput = GetComponent<ThrownItemInput>();
         _itemMover = GetComponent<ThrownItemMover>();
         
         InitPoints();
@@ -62,7 +62,7 @@ public class ThrowChecker : MonoBehaviour
         _angleDeviation = Vector2.Angle(_targetScreenDirection, swipeDirection);
         _angleDeviation = swipeDirection.y >= 0  ? _angleDeviation : 180 -_angleDeviation;
         
-        var middleY = _throwItem.IsGorizontalMoving ? _targetPoint.y + _throwItem.PassOffsetY / 2 : _targetPoint.y + _throwItem.HeightThrownIfVertical;
+        var middleY = _thrownItem.IsGorizontalMoving ? _targetPoint.y + _thrownItem.PassOffsetY / 2 : _targetPoint.y + _thrownItem.HeightThrownIfVertical;
         var middleOfTargetVector = VectorUtils.GetRotatedVector(new Vector2(_startPoint.x, _startPoint.z), _middleVectorPoint, _angleDeviation, _isClockWiseSwiping);
         var middlePoint = new Vector3(middleOfTargetVector.x, middleY, middleOfTargetVector.y);
         
@@ -72,7 +72,7 @@ public class ThrowChecker : MonoBehaviour
         }
         else
         {
-            var targetFailY = _throwItem.IsGorizontalMoving ? _targetPoint.y + _throwItem.PassOffsetY : _targetPoint.y;
+            var targetFailY = _thrownItem.IsGorizontalMoving ? _targetPoint.y + _thrownItem.PassOffsetY : _targetPoint.y;
             var failTargetVector = 
                 VectorUtils.GetRotatedVector(new Vector2(_startPoint.x, _startPoint.z), new Vector2(_targetPoint.x, _targetPoint.z), _angleDeviation, _isClockWiseSwiping);
             var failTargetPoint = new Vector3(failTargetVector.x, targetFailY, failTargetVector.y);

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.XR;
 
 [ExecuteInEditMode]
@@ -14,9 +15,10 @@ public class MobileBlur : MonoBehaviour
     public float BlurAmount = 1;
     [Range(2, 3)]
     public int KernelSize = 2;
-    public Texture2D maskTexture; 
-    private Texture2D previous;
+    [FormerlySerializedAs("maskTexture")] public Texture2D MaskTexture;
     public Material material = null;
+    
+    private Texture2D _previous;
 
     static readonly string kernelKeyword = "KERNEL";
     static readonly int blurAmountString = Shader.PropertyToID("_BlurAmount");
@@ -59,10 +61,10 @@ public class MobileBlur : MonoBehaviour
 
         pass = algorithm == Algorithm.Box ? 0 : 1;
 
-        if(maskTexture != null || previous != maskTexture)
+        if(MaskTexture != null || _previous != MaskTexture)
         {
-            previous = maskTexture;
-            material.SetTexture(maskTexString, maskTexture);
+            _previous = MaskTexture;
+            material.SetTexture(maskTexString, MaskTexture);
         }
 
         RenderTexture blurTex = null;

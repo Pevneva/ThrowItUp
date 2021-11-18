@@ -8,14 +8,14 @@ using Sequence = DG.Tweening.Sequence;
 using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
 
-[RequireComponent(typeof(ThrowItem), typeof(Rigidbody))]
+[RequireComponent(typeof(ThrownItem), typeof(Rigidbody))]
 public class ThrownItemMover : MonoBehaviour
 {
     [SerializeField] private float _speedHorizontalRotation;
     [SerializeField] private float _speedVerticalRotation;
     [SerializeField] private float _speedMoving;
     
-    private ThrowItem _throwItem;
+    private ThrownItem _thrownItem;
     private Rigidbody _rigidbody;
     private CameraMoving _cameraMoving;
     private Ray _ray;
@@ -39,7 +39,7 @@ public class ThrownItemMover : MonoBehaviour
 
     private void Start()
     {
-        _throwItem = GetComponent<ThrowItem>();
+        _thrownItem = GetComponent<ThrownItem>();
         _rigidbody = GetComponent<Rigidbody>();
         _cameraMoving = FindObjectOfType<CameraMoving>();
         _rigidbody.isKinematic = true;
@@ -58,7 +58,7 @@ public class ThrownItemMover : MonoBehaviour
         var durationInFrames = _duration * 2 / Time.fixedDeltaTime;
         _durationInFrames = Mathf.FloorToInt(durationInFrames);
 
-        Vector3 targetPointResult = new Vector3(targetPoint.x, targetPoint.y + _throwItem.PassOffsetY, targetPoint.z);
+        Vector3 targetPointResult = new Vector3(targetPoint.x, targetPoint.y + _thrownItem.PassOffsetY, targetPoint.z);
         _cameraMoving.MoveIfWin(_duration * 2, targetPointResult);
         
         seq.Append(transform.DOMove(middlePoint, _duration).SetEase(Ease.Linear));
@@ -66,7 +66,7 @@ public class ThrownItemMover : MonoBehaviour
             .SetEase(Ease.Linear)
             .OnComplete(() => DoWin())); 
         
-        if (_throwItem.IsVerticalRotate)
+        if (_thrownItem.IsVerticalRotate)
         {
             var countRotations = Mathf.FloorToInt(_duration * _speedVerticalRotation);
             var tempDuration = 2 * _duration / (countRotations * 2 + 1);
@@ -80,7 +80,7 @@ public class ThrownItemMover : MonoBehaviour
                 .SetEase(Ease.Linear)); 
         }
 
-        if (_throwItem.IsGorizontalRotate && _throwItem.IsNeedRotateToPass == false)
+        if (_thrownItem.IsGorizontalRotate && _thrownItem.IsNeedRotateToPass == false)
         {
             _countHorizontalRotationsInt = Mathf.FloorToInt(_duration / _speedHorizontalRotation);
            
@@ -92,7 +92,7 @@ public class ThrownItemMover : MonoBehaviour
                 .SetEase(Ease.Linear));
         }
 
-        if (_throwItem.IsGorizontalRotate && _throwItem.IsNeedRotateToPass)
+        if (_thrownItem.IsGorizontalRotate && _thrownItem.IsNeedRotateToPass)
         {
             _countHorizontalRotationsInt = Mathf.FloorToInt(_duration * 2 / _speedHorizontalRotation);
             
@@ -126,7 +126,7 @@ public class ThrownItemMover : MonoBehaviour
         var resultPoint = Vector3.zero;
         var collider = GetComponent<Collider>();
 
-        if (_throwItem.IsGorizontalMoving)
+        if (_thrownItem.IsGorizontalMoving)
             direction = new Vector3(direction.x, 0, direction.z);
 
         if (collider != null)
@@ -152,18 +152,18 @@ public class ThrownItemMover : MonoBehaviour
         _startPoint = transform.position;
         _failTargetVector = targetPoint - middlePoint;
         var angle = isRightMoving  ? targetAngle + swipeAngle : targetAngle - swipeAngle;
-        var resultPoint = GetFirstColliderPoint(middlePoint, _failTargetVector, _throwItem.FailOffset);
+        var resultPoint = GetFirstColliderPoint(middlePoint, _failTargetVector, _thrownItem.FailOffset);
                 
         Debug.Log("AAA _failTargetVector : " + _failTargetVector);
-        Debug.Log("AAA _throwItem.FailOffset : " + _throwItem.FailOffset);
+        Debug.Log("AAA _thrownItem.FailOffset : " + _thrownItem.FailOffset);
         Debug.Log("AAA middlePoint : " + middlePoint);
         Debug.Log("AAA resultPoint : " + resultPoint);
         Debug.Log("AAA targetPoint : " + targetPoint);
         
-        if (resultPoint == Vector3.zero && _throwItem.IsGorizontalMoving == false)
+        if (resultPoint == Vector3.zero && _thrownItem.IsGorizontalMoving == false)
             resultPoint = targetPoint;  
         
-        else if (resultPoint == Vector3.zero && _throwItem.IsGorizontalMoving)
+        else if (resultPoint == Vector3.zero && _thrownItem.IsGorizontalMoving)
             resultPoint = VectorUtils.GetPointOnVectorByDistance(middlePoint, new Vector3(_failTargetVector.x, 0f, _failTargetVector.z), 1000);
         
         var duration_1 = Vector3.Distance(transform.position, middlePoint) / _speedMoving;
@@ -177,7 +177,7 @@ public class ThrownItemMover : MonoBehaviour
         seq.Append(transform.DOMove(middlePoint, duration_1).SetEase(Ease.Linear));
         seq.Append(transform.DOMove(resultPoint, duration_2).SetEase(Ease.Linear));
 
-        if (_throwItem.IsVerticalRotate)
+        if (_thrownItem.IsVerticalRotate)
         {
             var countRotations = Mathf.FloorToInt(_duration * _speedVerticalRotation);
             Debug.Log(" Loops: " + countRotations);
@@ -189,7 +189,7 @@ public class ThrownItemMover : MonoBehaviour
                 .SetEase(Ease.Linear));
         }
 
-        if (_throwItem.IsGorizontalRotate)
+        if (_thrownItem.IsGorizontalRotate)
         {
             var countRotations = Mathf.FloorToInt(_duration / _speedHorizontalRotation);
             Debug.Log(" Loops: " + countRotations);
@@ -207,10 +207,10 @@ public class ThrownItemMover : MonoBehaviour
             
             var koef = 1;
             
-            if (_throwItem.IsVerticalRotate)
+            if (_thrownItem.IsVerticalRotate)
                 _rigidbody.AddRelativeTorque( new Vector3(-1, 0,0 ) * 2, ForceMode.Impulse);
 
-            if (_throwItem.IsGorizontalMoving)
+            if (_thrownItem.IsGorizontalMoving)
                 koef = 2;
             
             var forceVector = new Vector3(_failTargetVector.x, 0, _failTargetVector.z);

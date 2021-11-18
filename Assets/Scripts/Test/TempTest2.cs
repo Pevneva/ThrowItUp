@@ -28,7 +28,7 @@ public class TempTest2 : MonoBehaviour
         
         // _trail.emitting = false;
         //
-        // ThrowItInput item = GetComponent<ThrowItInput>();
+        // ThrownItemInput item = GetComponent<ThrownItemInput>();
         // item.SwipeDone += DoTrail;
 
 

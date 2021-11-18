@@ -1,8 +1,7 @@
 using UnityEngine;
 using UnityEngine.Serialization;
 
-// [RequireComponent(typeof(Rigidbody))]
-public class ThrowItem : MonoBehaviour
+public class ThrownItem : MonoBehaviour
 {
     [SerializeField] private bool _isVerticalRotate;
     [SerializeField] private bool _isGorizontalRotate;

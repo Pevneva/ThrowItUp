@@ -11,7 +11,6 @@ public class DialogsContainer : MonoBehaviour
     private Canvas _canvas;
     private FailScreen _currentFailScreen;
 
-
     private void Start()
     {
         _canvas = FindObjectOfType<Canvas>();

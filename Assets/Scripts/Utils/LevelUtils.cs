@@ -21,7 +21,7 @@ public class LevelUtils : MonoBehaviour
     public Vector3 TargetPosition => _targetPosition.position;
     public event UnityAction<int> LevelChanged;
     
-    private ThrowItem _throwItem;
+    private ThrownItem _thrownItem;
     private AraTrail _trail;
     private GameObject _targetItem;
     private DialogsContainer _dialogsContainer;
@@ -64,12 +64,12 @@ public class LevelUtils : MonoBehaviour
     {
         _targetItem = Instantiate(_targetItemsPrefabs[(Level-1) % _throwItemsPrefabs.Length], _targetPosition.position, Quaternion.identity);
         var _throwItemGO = Instantiate(_throwItemsPrefabs[(Level-1) % _targetItemsPrefabs.Length], _startPosition, Quaternion.identity);
-        _throwItem = _throwItemGO.GetComponentInChildren<ThrowItem>();
+        _thrownItem = _throwItemGO.GetComponentInChildren<ThrownItem>();
         _trail = _throwItemGO.GetComponentInChildren<AraTrail>();
 
-        _throwItem.GetComponent<ThrownItemMover>().LevelPassed += OnLevelPassed;
-        _throwItem.GetComponent<ThrownItemMover>().LevelFailed += OnLevelFailed;
-        _throwItem.GetComponent<ThrowItInput>().SwipeDone += PlayFlyEffects;
+        _thrownItem.GetComponent<ThrownItemMover>().LevelPassed += OnLevelPassed;
+        _thrownItem.GetComponent<ThrownItemMover>().LevelFailed += OnLevelFailed;
+        _thrownItem.GetComponent<ThrownItemInput>().SwipeDone += PlayFlyEffects;
     }
 
     private void OnLevelPassed()
@@ -84,7 +84,7 @@ public class LevelUtils : MonoBehaviour
     private void OnLevelFailed()
     {
         _amountAttemtp--;
-        _failThrownItems.Add(_throwItem.gameObject);
+        _failThrownItems.Add(_thrownItem.gameObject);
         
         if (_amountAttemtp <= 0) 
             DoEndGame();
@@ -104,9 +104,9 @@ public class LevelUtils : MonoBehaviour
 
     public void IncreaseLevel()
     {
-        _throwItem.GetComponent<ThrownItemMover>().LevelPassed -= OnLevelPassed;
-        _throwItem.GetComponent<ThrownItemMover>().LevelFailed -= OnLevelFailed;
-        _throwItem.GetComponent<ThrowItInput>().SwipeDone -= PlayFlyEffects;
+        _thrownItem.GetComponent<ThrownItemMover>().LevelPassed -= OnLevelPassed;
+        _thrownItem.GetComponent<ThrownItemMover>().LevelFailed -= OnLevelFailed;
+        _thrownItem.GetComponent<ThrownItemInput>().SwipeDone -= PlayFlyEffects;
         
         Level++;
         LevelChanged?.Invoke(Level);
@@ -115,23 +115,23 @@ public class LevelUtils : MonoBehaviour
 
     private void SetNewThrowItem()
     {
-        _throwItem.GetComponent<ThrownItemMover>().LevelPassed -= OnLevelPassed;
-        _throwItem.GetComponent<ThrownItemMover>().LevelFailed -= OnLevelFailed;
-        _throwItem.GetComponent<ThrowItInput>().SwipeDone -= PlayFlyEffects;
+        _thrownItem.GetComponent<ThrownItemMover>().LevelPassed -= OnLevelPassed;
+        _thrownItem.GetComponent<ThrownItemMover>().LevelFailed -= OnLevelFailed;
+        _thrownItem.GetComponent<ThrownItemInput>().SwipeDone -= PlayFlyEffects;
         
         var _throwItemGO = Instantiate(_throwItemsPrefabs[(Level-1) % _targetItemsPrefabs.Length], _startPosition, Quaternion.identity);
-        _throwItem = _throwItemGO.GetComponentInChildren<ThrowItem>();
+        _thrownItem = _throwItemGO.GetComponentInChildren<ThrownItem>();
         _trail = _throwItemGO.GetComponentInChildren<AraTrail>();
-        // _flyFx = Instantiate(_flyFxPrefab, _throwItem.transform);
+        // _flyFx = Instantiate(_flyFxPrefab, _thrownItem.transform);
 
-        _throwItem.GetComponent<ThrownItemMover>().LevelPassed += OnLevelPassed;
-        _throwItem.GetComponent<ThrownItemMover>().LevelFailed += OnLevelFailed;
-        _throwItem.GetComponent<ThrowItInput>().SwipeDone += PlayFlyEffects;
+        _thrownItem.GetComponent<ThrownItemMover>().LevelPassed += OnLevelPassed;
+        _thrownItem.GetComponent<ThrownItemMover>().LevelFailed += OnLevelFailed;
+        _thrownItem.GetComponent<ThrownItemInput>().SwipeDone += PlayFlyEffects;
     }
 
     public void RemoveTargetItems()
     {
-        Destroy(_throwItem.gameObject);
+        Destroy(_thrownItem.gameObject);
         Destroy(_targetItem);
     }
     

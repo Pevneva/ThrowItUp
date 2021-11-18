@@ -10,7 +10,7 @@ public class TempTest : MonoBehaviour
     [SerializeField] private Vector3 _targetMoveVector;
     [SerializeField] private float _angle;
 
-    private ThrowItem _throwItem;
+    private ThrownItem _thrownItem;
     private Rigidbody _rigidbody;
     private Vector3 _eulerAngleVelocity;
     private Vector3 _angleVector;

@@ -160,7 +160,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: db7cf2283cc709c4a883d8750b2baf24, type: 2}
+  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -181,9 +181,7 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  m_Positions: []
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.02
@@ -191,47 +189,47 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
+        time: 0.029411316
+        value: 0.030303955
+        inSlope: 7.94054
+        outSlope: 7.94054
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
-        outWeight: 0.33333334
+        outWeight: 0.18280785
       - serializedVersion: 3
-        time: 0.10591414
-        value: 1.008593
-        inSlope: 0.14033449
-        outSlope: 0.14033449
+        time: 0.3075968
+        value: 0.95959336
+        inSlope: 0.16029035
+        outSlope: 0.16029035
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
+        inWeight: 0.26293305
+        outWeight: 0.29217643
       - serializedVersion: 3
-        time: 1
-        value: 0.018182011
-        inSlope: -3.918521
-        outSlope: -3.918521
+        time: 0.9832179
+        value: 0.9979781
+        inSlope: 0.05360974
+        outSlope: 0.05360974
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.09115457
+        inWeight: 0.8849845
         outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.9528302, g: 0.0665183, b: 0.0665183, a: 1}
+      key0: {r: 0.9529412, g: 0.066666685, b: 0.9107885, a: 1}
       key1: {r: 0.8679245, g: 0.20797431, b: 0.74121416, a: 1}
-      key2: {r: 1, g: 1, b: 1, a: 0}
+      key2: {r: 0.9528302, g: 0.057529315, b: 0.057529315, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
       ctime0: 0
-      ctime1: 39707
+      ctime1: 18311
       ctime2: 65535
       ctime3: 0
       ctime4: 0
@@ -249,8 +247,8 @@ LineRenderer:
       m_Mode: 0
       m_NumColorKeys: 3
       m_NumAlphaKeys: 2
-    numCornerVertices: 0
-    numCapVertices: 0
+    numCornerVertices: 7
+    numCapVertices: 7
     alignment: 0
     textureMode: 0
     shadowBias: 0.5
@@ -5264,7 +5262,7 @@ MonoBehaviour:
   - {fileID: 6615695894075141989, guid: 46f02d4c43318b2488178e0170eb1d08, type: 3}
   - {fileID: 6201096833722102321, guid: 0be4e34b0aaa97f409e53ddc1069a2d5, type: 3}
   _menuPanel: {fileID: 1096829287}
-  _amountAttemtp: 4
+  _amountAttemtp: 40
 --- !u!4 &902939440
 Transform:
   m_ObjectHideFlags: 0
@@ -5502,7 +5500,7 @@ MonoBehaviour:
   algorithm: 2
   BlurAmount: 0
   KernelSize: 2
-  maskTexture: {fileID: 0}
+  MaskTexture: {fileID: 0}
   material: {fileID: 2100000, guid: 4f642bff2ce5b4b4884e5d22090622f8, type: 2}
 --- !u!82 &1131166594
 AudioSource:
