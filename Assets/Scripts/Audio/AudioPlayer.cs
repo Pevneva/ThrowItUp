@@ -23,7 +23,7 @@ public class AudioPlayer : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
         _startVolumeBackground = _backgroundSource.volume;
         _isEndedBackgroundMusic = false;
-        _volume = 0.4f;
+        _volume = 0.8f;
     }
 
     public void PlayThrowSound()
@@ -36,7 +36,7 @@ public class AudioPlayer : MonoBehaviour
     public void PlayFailSound()
     {
         _audioSource.clip = _fail;
-        _audioSource.volume = 0.08f;
+        _audioSource.volume = 0.8f;
         _audioSource.Play();
     }
 
@@ -53,7 +53,7 @@ public class AudioPlayer : MonoBehaviour
 
     public void PlayWinSound()
     {
-        _audioSource.volume = _volume;
+        _audioSource.volume = 1;
         _audioSource.clip = _win;
         _audioSource.Play();
     }

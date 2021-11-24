@@ -49,7 +49,6 @@ public class ThrownItemMover : MonoBehaviour
         _rigidbody.mass = 5;
         // _speedMoving = 10;
         // _speedHorizontalRotation = 0.03f;
-        
     }
 
     public void MovePass(Vector3 middlePoint, Vector3 targetPoint, float angle)

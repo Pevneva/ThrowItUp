@@ -3,10 +3,14 @@ using UnityEngine.Events;
 
 public class ThrownItemInput : MonoBehaviour
 {
+    [SerializeField] private GameObject _startFlyingFx;
+    // [SerializeField] private ParticleSystem _startFlyingFx2;
+    
     private Vector2 _startPos;
     private Vector2 _direction;
     private LineRenderer _line;
     private AudioPlayer _audio;
+    private FXUtils _fxUtils;
 
     public event UnityAction<Vector2> SwipeDone;
 
@@ -14,6 +18,8 @@ public class ThrownItemInput : MonoBehaviour
     {
         _line = FindObjectOfType<LineRenderer>();
         _audio = FindObjectOfType<AudioPlayer>();
+        _fxUtils = FindObjectOfType<FXUtils>();
+        // _startFlyingFx.SetActive(false);
     }
 
     private void Update()
@@ -54,6 +60,8 @@ public class ThrownItemInput : MonoBehaviour
             {
                 SwipeDone?.Invoke(_direction.normalized * 10);
                 _audio.PlayThrowSound();
+                // _startFlyingFx.SetActive(true);
+                // _fxUtils.ShowStartFlyingEffect();
             }
             
             Invoke(nameof(RemoveLine), 0.5f);

@@ -5,8 +5,10 @@ public class FXUtils : MonoBehaviour
 {
     [SerializeField] private GameObject _winFx1;
     [SerializeField] private GameObject _winFx2;
-    // [SerializeField] private GameObject _flyFx;
+    [SerializeField] private ParticleSystem _startFlyingFx;
 
+    public ParticleSystem StartFlyingFx => _startFlyingFx;
+    
     private bool _isSecondWinFXShowing;
 
     public void ShowWinFx()
@@ -42,5 +44,10 @@ public class FXUtils : MonoBehaviour
     private void HideWinFx2()
     {
         _winFx2.SetActive(false);
+    }
+
+    public void ShowStartFlyingEffect()
+    {
+        _startFlyingFx.Play();
     }
 }

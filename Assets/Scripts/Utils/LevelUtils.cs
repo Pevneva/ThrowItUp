@@ -33,6 +33,8 @@ public class LevelUtils : MonoBehaviour
     private int _startAttempts;
     private LineRenderer _lineRenderer;
     private AudioPlayer _audio;
+    private GameObject _startFlyEffectGO;
+    private GameObject _throwItemGO;
     
     private void Start()
     {
@@ -58,23 +60,22 @@ public class LevelUtils : MonoBehaviour
     {
         if (_isBluring)
         {
-            _mobileBlur.BlurAmount = Mathf.Lerp(0f, 2, 1f);
+            _mobileBlur.BlurAmount = Mathf.Lerp(0f, 2, 0.5f);
         }
     }
 
     public void InitLevelItems()
     {
         _targetItem = Instantiate(_targetItemsPrefabs[(Level-1) % _throwItemsPrefabs.Length], _targetPosition.position, Quaternion.identity);
-        var _throwItemGO = Instantiate(_throwItemsPrefabs[(Level-1) % _targetItemsPrefabs.Length], _startPosition, Quaternion.identity);
-        _thrownItem = _throwItemGO.GetComponentInChildren<ThrownItem>();
-        _trail = _throwItemGO.GetComponentInChildren<AraTrail>();
+        
+        CreateThrownItem();
+        CreateThrowItemEffects();
 
         _thrownItem.GetComponent<ThrownItemMover>().LevelPassed += OnLevelPassed;
         _thrownItem.GetComponent<ThrownItemMover>().LevelFailed += OnLevelFailed;
         _thrownItem.GetComponent<ThrownItemInput>().SwipeDone += PlayFlyEffects;
         
         _audio.PlayBackgroundMusic();
-
     }
 
     private void OnLevelPassed()
@@ -128,14 +129,28 @@ public class LevelUtils : MonoBehaviour
         _thrownItem.GetComponent<ThrownItemMover>().LevelFailed -= OnLevelFailed;
         _thrownItem.GetComponent<ThrownItemInput>().SwipeDone -= PlayFlyEffects;
         
-        var _throwItemGO = Instantiate(_throwItemsPrefabs[(Level-1) % _targetItemsPrefabs.Length], _startPosition, Quaternion.identity);
-        _thrownItem = _throwItemGO.GetComponentInChildren<ThrownItem>();
-        _trail = _throwItemGO.GetComponentInChildren<AraTrail>();
-        // _flyFx = Instantiate(_flyFxPrefab, _thrownItem.transform);
-
+        CreateThrownItem();
+        CreateThrowItemEffects();
+        
         _thrownItem.GetComponent<ThrownItemMover>().LevelPassed += OnLevelPassed;
         _thrownItem.GetComponent<ThrownItemMover>().LevelFailed += OnLevelFailed;
         _thrownItem.GetComponent<ThrownItemInput>().SwipeDone += PlayFlyEffects;
+    }
+
+    private void CreateThrownItem()
+    {
+        _throwItemGO = Instantiate(_throwItemsPrefabs[(Level-1) % _targetItemsPrefabs.Length], _startPosition, Quaternion.identity);
+        _thrownItem = _throwItemGO.GetComponentInChildren<ThrownItem>();        
+    }
+
+    private void CreateThrowItemEffects()
+    {
+        _trail = _throwItemGO.GetComponentInChildren<AraTrail>();
+        _startFlyEffectGO = Instantiate(_fxUtils.StartFlyingFx).gameObject;
+        _startFlyEffectGO.transform.localScale = new Vector3(1, 1, 1);
+        _startFlyEffectGO.transform.parent = _throwItemGO.transform;
+        _startFlyEffectGO.transform.localPosition = Vector3.zero;
+        _startFlyEffectGO.SetActive(false);        
     }
 
     public void RemoveTargetItems()
@@ -154,8 +169,7 @@ public class LevelUtils : MonoBehaviour
 
     private void PlayFlyEffects(Vector2 direction)
     {
-        // _trail.emit = true;
-        // _flyFx.Play();
+        _startFlyEffectGO.SetActive(true);
     }
 
     private void RestartGame()
