@@ -3,9 +3,6 @@ using UnityEngine.Events;
 
 public class ThrownItemInput : MonoBehaviour
 {
-    [SerializeField] private GameObject _startFlyingFx;
-    // [SerializeField] private ParticleSystem _startFlyingFx2;
-    
     private Vector2 _startPos;
     private Vector2 _direction;
     private LineRenderer _line;
